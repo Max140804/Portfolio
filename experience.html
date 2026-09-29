@@ -1,0 +1,2370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Experience — MMCS</title>
+<meta name="description" content="The journey — roles, milestones, and the story behind each chapter." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Archivo+Black&family=Special+Elite&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet" />
+<style>
+  /* ============ TOKENS ============ */
+  :root {
+    --ink: #0E0E0E;
+    --paper: #F5EFE1;
+    --paper-2: #EBE3D0;
+    --paper-3: #E2D9C2;
+    --purple: #6C4CE0;
+    --purple-deep: #4B2FB8;
+    --yellow: #FFD43B;
+    --pink: #FF6FA5;
+    --green: #6FE39B;
+    --orange: #FF8B3D;
+    --blue: #5BB8FF;
+    --wood: #E8C28D;
+    --wood-dark: #C79E68;
+    --border: 3px solid var(--ink);
+    --shadow-sm: 4px 4px 0 var(--ink);
+    --shadow: 6px 6px 0 var(--ink);
+    --shadow-lg: 10px 10px 0 var(--ink);
+    --font-display: 'Archivo Black', 'Space Grotesk', sans-serif;
+    --font-body: 'Space Grotesk', -apple-system, sans-serif;
+  }
+
+  /* ============ RESET ============ */
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 100px; }
+  body {
+    font-family: var(--font-body);
+    background: var(--paper);
+    color: var(--ink);
+    line-height: 1.55;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+  }
+  a { color: inherit; text-decoration: none; }
+  ul { list-style: none; }
+  img { max-width: 100%; display: block; }
+  button { font-family: inherit; cursor: pointer; }
+
+  .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+  .section { padding: 100px 0; position: relative; }
+
+  /* ============ TYPE ============ */
+  .eyebrow {
+    display: inline-block;
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 0.78rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    padding: 8px 16px;
+    background: var(--ink);
+    color: var(--paper);
+    border-radius: 100px;
+    margin-bottom: 20px;
+  }
+  .eyebrow.purple { background: var(--purple); color: #fff; border: var(--border); }
+  .eyebrow.yellow { background: var(--yellow); color: var(--ink); border: var(--border); }
+  .eyebrow.pink { background: var(--pink); color: var(--ink); border: var(--border); }
+  .eyebrow.green { background: var(--green); color: var(--ink); border: var(--border); }
+  .eyebrow.orange { background: var(--orange); color: var(--ink); border: var(--border); }
+  .eyebrow.blue { background: var(--blue); color: var(--ink); border: var(--border); }
+
+  .display {
+    font-family: var(--font-display);
+    font-weight: 900;
+    line-height: 0.95;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+  }
+  .h1 { font-size: clamp(2.2rem, 6.5vw, 5rem); }
+  .h2 { font-size: clamp(1.8rem, 5.5vw, 3.6rem); }
+  .h3 { font-size: clamp(1.4rem, 3vw, 2rem); }
+
+  /* ============ BUTTONS ============ */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 16px 28px;
+    border-radius: 100px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    border: var(--border);
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    white-space: nowrap;
+  }
+  .btn:hover { transform: translate(-2px, -2px); box-shadow: 6px 6px 0 var(--ink); }
+  .btn:active { transform: translate(2px, 2px); box-shadow: 2px 2px 0 var(--ink); }
+  .btn-primary { background: var(--yellow); color: var(--ink); }
+  .btn-ghost { background: var(--paper); color: var(--ink); }
+  .btn svg { transition: transform 0.2s ease; }
+  .btn:hover svg { transform: translateX(3px); }
+
+  /* ============ NAVBAR ============ */
+  .navbar {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+    background: var(--paper);
+    border-bottom: var(--border);
+  }
+  .navbar .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 78px;
+  }
+  .nav-logo {
+    font-family: var(--font-display);
+    font-size: 1.35rem;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .nav-logo .dot {
+    width: 14px; height: 14px;
+    background: var(--purple);
+    border: 2px solid var(--ink);
+    border-radius: 50%;
+  }
+  .nav-links { display: flex; gap: 6px; align-items: center; }
+  .nav-links a {
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 10px 16px;
+    border-radius: 100px;
+    transition: background 0.2s ease;
+  }
+  .nav-links a:hover { background: var(--yellow); }
+  .nav-links a.active { background: var(--purple); color: #fff; }
+
+  .nav-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    padding: 6px;
+  }
+  .nav-toggle span {
+    display: block;
+    width: 26px; height: 3px;
+    background: var(--ink);
+    border-radius: 2px;
+    transition: all 0.25s ease;
+  }
+
+  /* ============ FLOATING CTA ============ */
+  .float-cta {
+    position: fixed;
+    right: 26px;
+    bottom: 26px;
+    z-index: 998;
+    display: flex;
+    align-items: center;
+    height: 64px;
+    padding: 0;
+    background: var(--ink);
+    color: var(--paper);
+    border: 3px solid var(--ink);
+    border-radius: 16px;
+    box-shadow: 5px 5px 0 var(--purple);
+    overflow: hidden;
+    white-space: nowrap;
+    text-decoration: none;
+    transition: background 0.25s ease, color 0.25s ease,
+                box-shadow 0.25s ease, transform 0.18s ease;
+  }
+  .float-cta-icon {
+    flex: 0 0 58px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    line-height: 1;
+    transition: transform 0.5s cubic-bezier(0.34, 1.6, 0.64, 1);
+  }
+  .float-cta-label {
+    display: block;
+    max-width: 0;
+    overflow: hidden;
+    opacity: 0;
+    font-family: var(--font-display);
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    transition: max-width 0.4s cubic-bezier(0.34, 1.4, 0.64, 1),
+                padding-right 0.4s cubic-bezier(0.34, 1.4, 0.64, 1),
+                opacity 0.25s ease;
+  }
+  .float-cta:hover,
+  .float-cta:focus-visible {
+    background: var(--purple);
+    color: #fff;
+    box-shadow: 8px 8px 0 var(--ink);
+    transform: translate(-3px, -3px);
+    outline: none;
+  }
+  .float-cta:hover .float-cta-icon,
+  .float-cta:focus-visible .float-cta-icon { transform: rotate(72deg); }
+  .float-cta:hover .float-cta-label,
+  .float-cta:focus-visible .float-cta-label {
+    max-width: 140px;
+    padding-right: 22px;
+    opacity: 1;
+  }
+
+  /* ============ PAGE HERO ============ */
+  .page-hero {
+    background: var(--purple);
+    color: var(--paper);
+    border-bottom: var(--border);
+    padding: 160px 0 100px;
+    position: relative;
+    overflow: hidden;
+  }
+  .page-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(circle, rgba(255,255,255,0.15) 1.5px, transparent 1.6px);
+    background-size: 24px 24px;
+    pointer-events: none;
+    z-index: 0;
+  }
+  .page-hero .container { position: relative; z-index: 2; }
+  .page-hero-shape { position: absolute; border: var(--border); z-index: 1; }
+  .page-hero-shape.s1 { top: 18%; right: -50px; width: 170px; height: 170px; background: var(--yellow); border-radius: 50%; transform: rotate(15deg); }
+  .page-hero-shape.s2 { bottom: 10%; left: -40px; width: 90px; height: 90px; background: var(--green); border-radius: 50%; }
+
+  .page-hero-inner {
+    position: relative;
+    z-index: 3;
+    max-width: 820px;
+  }
+  .page-hero .eyebrow {
+    background: var(--yellow);
+    color: var(--ink);
+    border-color: var(--ink);
+  }
+  .page-hero h1 { margin-bottom: 24px; }
+  .page-hero h1 .highlight {
+    display: inline-block;
+    background: var(--yellow);
+    color: var(--ink);
+    padding: 0 14px;
+    border: var(--border);
+    border-radius: 14px;
+    transform: rotate(-1.5deg);
+    box-shadow: var(--shadow-sm);
+  }
+  .page-hero-lede {
+    font-size: clamp(1rem, 1.3vw, 1.15rem);
+    max-width: 600px;
+    color: rgba(255,255,255,0.9);
+    line-height: 1.7;
+    margin-bottom: 32px;
+  }
+  .page-hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+
+  /* ============ SECTION HEAD ============ */
+  .section-head { margin-bottom: 56px; max-width: 780px; }
+  .section-head .h2 { margin-bottom: 16px; }
+  .section-head p {
+    font-size: 1.05rem;
+    color: #3a3a3a;
+    max-width: 620px;
+    line-height: 1.65;
+  }
+
+  /* ============ STATS STRIP ============ */
+  .stats-strip {
+    background: var(--ink);
+    color: var(--paper);
+    border-bottom: var(--border);
+    padding: 60px 0;
+  }
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 30px;
+    text-align: center;
+  }
+  .stat-block {
+    padding: 20px 12px;
+    position: relative;
+  }
+  .stat-block:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: -15px;
+    top: 20%;
+    bottom: 20%;
+    width: 2px;
+    background: repeating-linear-gradient(180deg, rgba(245,239,225,0.4) 0, rgba(245,239,225,0.4) 4px, transparent 4px, transparent 8px);
+  }
+  .stat-num {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1;
+    letter-spacing: -0.03em;
+    margin-bottom: 8px;
+  }
+  .stat-block:nth-child(1) .stat-num { color: var(--yellow); }
+  .stat-block:nth-child(2) .stat-num { color: var(--green); }
+  .stat-block:nth-child(3) .stat-num { color: var(--pink); }
+  .stat-block:nth-child(4) .stat-num { color: var(--blue); }
+  .stat-block:nth-child(5) .stat-num { color: var(--orange); }
+  .stat-lbl {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    opacity: 0.7;
+  }
+
+  /* =================================================== */
+  /* ================== TIMELINE ======================= */
+  /* =================================================== */
+  .timeline-section {
+    background: var(--paper-2);
+    padding: 110px 0 140px;
+    position: relative;
+  }
+  .timeline-wrapper {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 30px 0 40px;
+  }
+  .tl-thread {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 5px;
+    transform: translateX(-50%);
+    background: repeating-linear-gradient(180deg, var(--ink) 0, var(--ink) 6px, #5a5a5a 6px, #5a5a5a 10px);
+    border-radius: 3px;
+    z-index: 1;
+  }
+  .tl-thread-progress {
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 0;
+    background: var(--purple);
+    border-radius: 3px;
+    transition: height 0.08s linear;
+    box-shadow: 0 0 12px rgba(108, 76, 224, 0.5);
+  }
+  .tl-thread-progress::after {
+    content: '';
+    position: absolute;
+    left: 50%; bottom: -8px;
+    width: 18px; height: 18px;
+    background: var(--yellow);
+    border: 3px solid var(--ink);
+    border-radius: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 0 0 0 rgba(255, 212, 59, 0.6);
+    animation: needle-pulse 1.8s ease-out infinite;
+    z-index: 5;
+  }
+  @keyframes needle-pulse {
+    0% { box-shadow: 0 0 0 0 rgba(255, 212, 59, 0.65); }
+    100% { box-shadow: 0 0 0 20px rgba(255, 212, 59, 0); }
+  }
+
+  .tl-items {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 56px;
+  }
+  .tl-item {
+    position: relative;
+    min-height: 120px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  .tl-item.active { opacity: 1; }
+  .tl-item.left { display: flex; justify-content: flex-start; }
+  .tl-item.right { display: flex; justify-content: flex-end; }
+
+  .tl-card {
+    background: var(--paper);
+    border: var(--border);
+    border-radius: 4px;
+    padding: 42px 30px 26px;
+    box-shadow: var(--shadow);
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+    position: relative;
+    width: calc(50% - 50px);
+  }
+  .tl-card:hover { transform: translate(-3px, -3px); box-shadow: 10px 10px 0 var(--ink); }
+
+  .tl-card::after {
+    content: '';
+    position: absolute;
+    top: 20px;
+    height: 3px;
+    width: 50px;
+    background: repeating-linear-gradient(90deg, var(--ink) 0, var(--ink) 4px, transparent 4px, transparent 7px);
+    transform: translateY(-50%);
+  }
+  .tl-item.left .tl-card::after { right: -50px; }
+  .tl-item.right .tl-card::after { left: -50px; }
+
+  .tl-eyelet {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    width: 28px; height: 28px;
+    transform: translate(-50%, -50%) scale(0);
+    background: var(--paper-2);
+    border-radius: 50%;
+    box-shadow:
+      inset 0 3px 5px rgba(0,0,0,0.35),
+      inset 0 -1px 0 rgba(255,255,255,0.4),
+      0 0 0 3px var(--ink);
+    z-index: 4;
+    transition: transform 0.55s cubic-bezier(0.34, 1.8, 0.64, 1);
+  }
+  .tl-item.active .tl-eyelet { transform: translate(-50%, -50%) scale(1); }
+  .tl-eyelet::after {
+    content: '';
+    position: absolute;
+    top: 50%; left: 50%;
+    width: 6px; height: 12px;
+    transform: translate(-50%, -50%);
+    background: var(--purple);
+    border-radius: 3px;
+  }
+  .tl-eyelet::before {
+    content: '';
+    position: absolute;
+    inset: -7px;
+    border: 2px dashed var(--ink);
+    border-radius: 50%;
+    opacity: 0.4;
+    animation: stitch-spin 20s linear infinite;
+  }
+  @keyframes stitch-spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  .tl-head {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 14px;
+  }
+  .tl-year {
+    display: inline-block;
+    font-family: var(--font-display);
+    font-size: 0.72rem;
+    padding: 6px 12px;
+    background: var(--purple);
+    color: #fff;
+    border: 2px solid var(--ink);
+    border-radius: 3px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    box-shadow: 3px 3px 0 var(--ink);
+  }
+  .tl-item.right .tl-year { background: var(--pink); color: var(--ink); }
+  .tl-item:nth-child(3) .tl-year { background: var(--yellow); color: var(--ink); }
+  .tl-item:nth-child(4) .tl-year { background: var(--green); color: var(--ink); }
+  .tl-item:nth-child(5) .tl-year { background: var(--orange); color: var(--ink); }
+  .tl-item:nth-child(6) .tl-year { background: var(--blue); color: var(--ink); }
+
+  .tl-type {
+    display: inline-block;
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 5px 11px;
+    background: var(--paper-2);
+    border: 2px solid var(--ink);
+    border-radius: 100px;
+  }
+
+  .tl-card h3 {
+    font-family: var(--font-display);
+    font-size: 1.15rem;
+    text-transform: uppercase;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    margin-bottom: 6px;
+  }
+  .tl-company {
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--purple);
+    margin-bottom: 14px;
+  }
+  .tl-card p {
+    font-size: 0.92rem;
+    color: #3a3a3a;
+    line-height: 1.7;
+    margin-bottom: 14px;
+  }
+  .tl-card p:last-of-type { margin-bottom: 16px; }
+
+  .tl-list {
+    margin-bottom: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+  }
+  .tl-list li {
+    font-size: 0.86rem;
+    line-height: 1.55;
+    color: #2a2a2a;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .tl-list li::before {
+    content: '▸';
+    color: var(--purple);
+    font-weight: 700;
+    flex-shrink: 0;
+    line-height: 1.4;
+  }
+
+  .tl-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    padding-top: 14px;
+    border-top: 2px dashed rgba(14,14,14,0.22);
+  }
+  .tl-stack span {
+    padding: 4px 9px;
+    background: var(--paper-2);
+    border: 2px solid var(--ink);
+    border-radius: 3px;
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .tl-item.left .tl-card {
+    transform: translateX(-70px);
+    transition: transform 0.65s cubic-bezier(0.34, 1.4, 0.64, 1), box-shadow 0.18s ease;
+  }
+  .tl-item.right .tl-card {
+    transform: translateX(70px);
+    transition: transform 0.65s cubic-bezier(0.34, 1.4, 0.64, 1), box-shadow 0.18s ease;
+  }
+  .tl-item.active .tl-card { transform: translateX(0); }
+  .tl-item.left .tl-card:hover { transform: translateX(0) translate(-3px, -3px); }
+  .tl-item.right .tl-card:hover { transform: translateX(0) translate(-3px, -3px); }
+
+  /* ============ EDUCATION / CERTS ============ */
+  .edu {
+    background: var(--paper);
+    border-top: var(--border);
+    border-bottom: var(--border);
+  }
+  .edu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+  }
+  .edu-card {
+    background: var(--paper-2);
+    border: var(--border);
+    border-radius: 18px;
+    padding: 28px 26px 26px;
+    box-shadow: var(--shadow);
+    position: relative;
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+    display: flex;
+    flex-direction: column;
+  }
+  .edu-card:hover { transform: translate(-3px, -3px); box-shadow: 10px 10px 0 var(--ink); }
+  .edu-card:nth-child(1) { background: var(--yellow); }
+  .edu-card:nth-child(2) { background: var(--green); }
+  .edu-card:nth-child(3) { background: var(--pink); }
+  .edu-card:nth-child(4) { background: var(--blue); }
+  .edu-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 54px; height: 54px;
+    background: var(--paper);
+    border: var(--border);
+    border-radius: 14px;
+    font-size: 1.5rem;
+    margin-bottom: 18px;
+    box-shadow: 4px 4px 0 var(--ink);
+  }
+  .edu-card .edu-kind {
+    font-size: 0.66rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--purple);
+    margin-bottom: 8px;
+  }
+  .edu-card h3 {
+    font-family: var(--font-display);
+    font-size: 1.05rem;
+    text-transform: uppercase;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    margin-bottom: 8px;
+  }
+  .edu-card .edu-where {
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    opacity: 0.7;
+    margin-bottom: 14px;
+    padding-bottom: 14px;
+    border-bottom: 2px dashed rgba(14,14,14,0.22);
+  }
+  .edu-card p {
+    font-size: 0.88rem;
+    line-height: 1.65;
+    color: #2a2a2a;
+    flex: 1;
+  }
+
+  /* ============ WINS / HIGHLIGHTS ============ */
+  .wins {
+    background: var(--paper-2);
+  }
+  .wins-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+  }
+  .win-card {
+    background: var(--paper);
+    border: var(--border);
+    border-radius: 18px;
+    padding: 28px 26px 26px;
+    box-shadow: var(--shadow);
+    position: relative;
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+  }
+  .win-card:hover { transform: translate(-3px, -3px); box-shadow: 10px 10px 0 var(--ink); }
+  .win-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px; height: 52px;
+    background: var(--purple);
+    color: #fff;
+    border: var(--border);
+    border-radius: 14px;
+    font-size: 1.4rem;
+    margin-bottom: 18px;
+    box-shadow: 4px 4px 0 var(--ink);
+  }
+  .win-card:nth-child(2n) .win-icon { background: var(--yellow); color: var(--ink); }
+  .win-card:nth-child(3n) .win-icon { background: var(--pink); color: var(--ink); }
+  .win-card:nth-child(4n) .win-icon { background: var(--green); color: var(--ink); }
+  .win-card h3 {
+    font-family: var(--font-display);
+    font-size: 1rem;
+    text-transform: uppercase;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    margin-bottom: 10px;
+  }
+  .win-card p { font-size: 0.9rem; line-height: 1.7; color: #3a3a3a; }
+
+  /* ============ LOOKING FOR NEXT ============ */
+  .next {
+    background: var(--paper);
+    border-top: var(--border);
+  }
+  .next-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+  }
+  .next-col {
+    background: var(--paper-2);
+    border: var(--border);
+    border-radius: 20px;
+    padding: 32px 28px;
+    box-shadow: var(--shadow);
+  }
+  .next-col.want { background: var(--green); }
+  .next-col.not { background: var(--paper-2); }
+  .next-col h3 {
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: -0.01em;
+    line-height: 1.15;
+    margin-bottom: 18px;
+    padding-bottom: 16px;
+    border-bottom: 2px solid var(--ink);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .next-col h3 .ico { font-size: 1.3rem; }
+  .next-list { display: flex; flex-direction: column; gap: 12px; }
+  .next-list li {
+    font-size: 0.92rem;
+    line-height: 1.6;
+    padding-left: 26px;
+    position: relative;
+    color: #2a2a2a;
+  }
+  .next-list li::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-weight: 700;
+    font-size: 0.9rem;
+  }
+  .next-col.want .next-list li::before { content: '✓'; color: var(--ink); }
+  .next-col.not .next-list li::before { content: '×'; color: var(--purple); }
+
+  /* ============ TESTIMONIAL ============ */
+  .testimonial {
+    display: none;
+    background: var(--purple);
+    color: var(--paper);
+    padding: 100px 0;
+    position: relative;
+    overflow: hidden;
+    border-top: var(--border);
+    border-bottom: var(--border);
+  }
+  .testimonial::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(circle, rgba(255,255,255,0.10) 1.5px, transparent 1.6px);
+    background-size: 28px 28px;
+    pointer-events: none;
+    z-index: 0;
+  }
+  .testimonial .container { position: relative; z-index: 2; }
+  .testimonial-card {
+    max-width: 780px;
+    margin: 0 auto;
+    background: var(--paper);
+    color: var(--ink);
+    border: var(--border);
+    border-radius: 22px;
+    padding: 50px 46px 40px;
+    box-shadow: var(--shadow-lg);
+    position: relative;
+    text-align: left;
+  }
+  .testimonial-quote-mark {
+    position: absolute;
+    top: -28px;
+    left: 30px;
+    width: 56px;
+    height: 56px;
+    background: var(--yellow);
+    border: var(--border);
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-display);
+    font-size: 2rem;
+    line-height: 0;
+    padding-top: 14px;
+    box-shadow: var(--shadow-sm);
+  }
+  .testimonial-card blockquote {
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
+    line-height: 1.75;
+    font-weight: 500;
+    color: #2a2a2a;
+    margin-bottom: 26px;
+  }
+  .testimonial-card blockquote strong { background: var(--yellow); padding: 0 4px; border-radius: 3px; }
+  .testimonial-attr {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding-top: 20px;
+    border-top: 2px dashed rgba(14,14,14,0.22);
+  }
+  .testimonial-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--pink);
+    border: var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    flex-shrink: 0;
+  }
+  .testimonial-name {
+    font-family: var(--font-display);
+    font-size: 0.92rem;
+    text-transform: uppercase;
+    letter-spacing: -0.01em;
+    line-height: 1.2;
+    margin-bottom: 2px;
+  }
+  .testimonial-role {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--purple);
+  }
+
+  /* ============ CONTACT ============ */
+  .contact {
+    background: var(--purple);
+    color: var(--paper);
+    text-align: center;
+    padding: 120px 0;
+    position: relative;
+    overflow: hidden;
+    border-bottom: var(--border);
+  }
+  .contact::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(circle, rgba(255,255,255,0.10) 1.5px, transparent 1.6px);
+    background-size: 28px 28px;
+    pointer-events: none;
+    z-index: 0;
+  }
+  .contact .container { position: relative; z-index: 2; }
+  .contact-shape { position: absolute; border: var(--border); z-index: 1; }
+  .contact-shape.c1 { top: 20%; left: 5%; width: 120px; height: 120px; background: var(--yellow); border-radius: 24px; transform: rotate(-14deg); }
+  .contact-shape.c2 { bottom: 15%; right: 6%; width: 140px; height: 140px; background: var(--pink); border-radius: 50%; transform: rotate(8deg); }
+  .contact-shape.c3 { top: 30%; right: 12%; width: 70px; height: 70px; background: var(--green); border-radius: 50%; }
+  .contact .eyebrow { background: var(--yellow); color: var(--ink); border-color: var(--ink); }
+  .contact .h2 { max-width: 16ch; margin: 0 auto 20px; }
+  .contact p {
+    font-size: 1.05rem;
+    max-width: 540px;
+    margin: 0 auto 40px;
+    color: rgba(255,255,255,0.88);
+    line-height: 1.65;
+  }
+  .contact-actions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+
+  /* ============ FOOTER ============ */
+  .footer { background: var(--ink); color: var(--paper); padding: 36px 0 120px; }
+  .footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+  .footer-logo {
+    font-family: var(--font-display);
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .footer-logo .dot { width: 12px; height: 12px; background: var(--yellow); border-radius: 50%; }
+  .footer-socials { display: flex; gap: 10px; }
+  .footer-socials a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px; height: 42px;
+    background: var(--paper);
+    color: var(--ink);
+    border: 2px solid var(--paper);
+    border-radius: 12px;
+    transition: background 0.2s ease, transform 0.2s ease;
+  }
+  .footer-socials a:hover { background: var(--yellow); transform: translateY(-2px); }
+  .footer-copy { font-size: 0.8rem; opacity: 0.7; letter-spacing: 0.05em; }
+
+  /* ============ REVEAL ============ */
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+
+  /* ============ TEXTURE ============ */
+  .timeline-section, .wins {
+    background-image:
+      linear-gradient(rgba(14,14,14,0.035) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(14,14,14,0.035) 1px, transparent 1px);
+    background-size: 34px 34px;
+  }
+
+  /* ============================================================ */
+  /* ====================== RESPONSIVE ========================== */
+  /* ============================================================ */
+
+  /* ---------- TABLET (≤ 960px) ---------- */
+  @media (max-width: 960px) {
+    .page-hero { padding: 140px 0 90px; }
+    .next-grid { grid-template-columns: 1fr; gap: 24px; }
+  }
+
+  /* ---------- MOBILE (≤ 768px) ---------- */
+  @media (max-width: 768px) {
+    .section { padding: 72px 0; }
+    .page-hero { padding: 120px 0 70px; }
+    .page-hero-shape { display: none; }
+    .page-hero-shape.s2 { display: block; width: 60px; height: 60px; bottom: 6%; left: -20px; }
+
+    .page-hero h1 { margin-bottom: 20px; }
+    .page-hero h1 .highlight { padding: 0 10px; }
+    .page-hero-lede { font-size: 1rem; margin-bottom: 26px; line-height: 1.65; }
+
+    .section-head { margin-bottom: 36px; }
+    .section-head p { font-size: 0.98rem; }
+
+    /* Stats strip */
+    .stats-strip { padding: 44px 0; }
+    .stats-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+    .stat-block { padding: 14px 8px; }
+    .stat-block:not(:last-child)::after { display: none; }
+    .stat-num { font-size: 2rem; margin-bottom: 6px; }
+    .stat-lbl { font-size: 0.64rem; }
+
+    /* Timeline: left-rail layout */
+    .timeline-section { padding: 80px 0 100px; }
+    .timeline-wrapper { padding: 16px 0 30px; }
+    .tl-thread { left: 15px; transform: none; width: 5px; }
+    .tl-items { gap: 32px; }
+    .tl-item {
+      padding-left: 52px;
+      display: block !important;
+      min-height: 0;
+    }
+    .tl-item .tl-card {
+      width: 100% !important;
+      transform: translateY(28px);
+      padding: 40px 22px 24px;
+      border-radius: 12px;
+    }
+    .tl-item.active .tl-card { transform: translateY(0); }
+    .tl-item .tl-card:hover { transform: translate(-3px, -3px); }
+    .tl-eyelet { left: 15px; top: 20px; width: 22px; height: 22px; }
+    .tl-item.left .tl-card::after,
+    .tl-item.right .tl-card::after {
+      left: -40px;
+      right: auto;
+      width: 38px;
+    }
+    .tl-card h3 { font-size: 1.02rem; }
+    .tl-card p { font-size: 0.88rem; }
+    .tl-card { padding: 38px 20px 22px; }
+    .tl-head { gap: 8px; margin-bottom: 12px; }
+    .tl-year { font-size: 0.66rem; padding: 5px 10px; }
+    .tl-type { font-size: 0.58rem; padding: 4px 9px; }
+    .tl-company { font-size: 0.72rem; margin-bottom: 12px; }
+    .tl-list li { font-size: 0.82rem; }
+    .tl-stack { padding-top: 12px; }
+    .tl-stack span { font-size: 0.56rem; padding: 3px 8px; }
+
+    /* Education */
+    .edu-grid { gap: 18px; }
+    .edu-card { padding: 24px 20px 22px; border-radius: 16px; }
+    .edu-icon { width: 48px; height: 48px; font-size: 1.3rem; margin-bottom: 14px; }
+    .edu-card h3 { font-size: 1rem; }
+
+    /* Wins */
+    .wins-grid { gap: 18px; }
+    .win-card { padding: 24px 20px 22px; border-radius: 16px; }
+    .win-icon { width: 46px; height: 46px; font-size: 1.25rem; margin-bottom: 16px; }
+    .win-card h3 { font-size: 0.95rem; }
+    .win-card p { font-size: 0.86rem; }
+
+    /* Next grid */
+    .next-grid { gap: 20px; }
+    .next-col { padding: 24px 20px; border-radius: 16px; }
+    .next-col h3 { font-size: 1rem; margin-bottom: 14px; padding-bottom: 14px; }
+    .next-list li { font-size: 0.86rem; padding-left: 22px; }
+
+    /* Testimonial */
+    .testimonial { padding: 80px 0; }
+    .testimonial-card { padding: 38px 24px 30px; border-radius: 18px; }
+    .testimonial-quote-mark {
+      width: 46px; height: 46px;
+      font-size: 1.6rem;
+      top: -23px; left: 22px;
+      padding-top: 12px;
+    }
+    .testimonial-card blockquote { font-size: 1rem; line-height: 1.7; margin-bottom: 22px; }
+    .testimonial-avatar { width: 44px; height: 44px; font-size: 1.2rem; }
+    .testimonial-name { font-size: 0.84rem; }
+    .testimonial-role { font-size: 0.66rem; }
+
+    /* Contact */
+    .contact { padding: 90px 0; }
+    .contact-shape { display: none; }
+    .contact p { font-size: 1rem; margin-bottom: 32px; }
+
+    /* Floating CTA */
+    .float-cta {
+      right: 18px;
+      bottom: 18px;
+      height: 58px;
+      border-radius: 14px;
+    }
+    .float-cta-icon { flex: 0 0 52px; font-size: 1.15rem; }
+    .footer { padding-bottom: 110px; }
+
+    /* ===== MOBILE MENU — floating card ===== */
+    .nav-links {
+      position: fixed;
+      top: 92px;
+      right: 14px;
+      left: auto;
+      bottom: auto;
+      width: min(310px, calc(100vw - 28px));
+      max-height: calc(100vh - 118px);
+      max-height: calc(100dvh - 118px);
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      justify-content: flex-start;
+      gap: 4px;
+      padding: 14px;
+      background: var(--paper);
+      border: var(--border);
+      border-radius: 20px;
+      box-shadow: 8px 8px 0 var(--ink);
+      z-index: 999;
+      counter-reset: navidx;
+
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transform: translateY(-12px) scale(0.94) rotate(-2deg);
+      transform-origin: top right;
+      transition: opacity 0.2s ease,
+                  transform 0.34s cubic-bezier(0.34, 1.5, 0.64, 1),
+                  visibility 0.2s ease;
+    }
+    .nav-links.open {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+      transform: translateY(0) scale(1) rotate(0deg);
+    }
+    .nav-links::before {
+      content: "★ Navigate";
+      font-family: var(--font-display);
+      font-size: 0.6rem;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      opacity: 0.4;
+      padding: 2px 6px 12px;
+      margin-bottom: 4px;
+      border-bottom: 2px dashed rgba(14, 14, 14, 0.22);
+    }
+    .nav-links a {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 0.9rem;
+      padding: 12px 14px;
+      border: 2px solid transparent;
+      border-radius: 12px;
+      transition: background 0.18s ease,
+                  border-color 0.18s ease,
+                  transform 0.18s ease;
+    }
+    .nav-links a::before {
+      counter-increment: navidx;
+      content: "0" counter(navidx);
+      font-family: var(--font-display);
+      font-size: 0.6rem;
+      color: var(--purple);
+      opacity: 0.75;
+    }
+    .nav-links a::after {
+      content: "→";
+      margin-left: auto;
+      font-size: 0.9rem;
+      opacity: 0;
+      transform: translateX(-6px);
+      transition: opacity 0.18s ease, transform 0.18s ease;
+    }
+    .nav-links a:hover,
+    .nav-links a:active {
+      background: var(--yellow);
+      border-color: var(--ink);
+      transform: translateX(2px);
+    }
+    .nav-links a:hover::after,
+    .nav-links a:active::after {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    .nav-links a.active { background: var(--purple); color: #fff; }
+    .nav-links a.active::before { color: var(--yellow); opacity: 1; }
+
+    .nav-toggle { display: flex; z-index: 1000; }
+    .nav-toggle.active span:nth-child(1) { transform: rotate(45deg) translate(6px, 6px); }
+    .nav-toggle.active span:nth-child(2) { opacity: 0; }
+    .nav-toggle.active span:nth-child(3) { transform: rotate(-45deg) translate(6px, -6px); }
+  }
+
+  /* ---------- SMALL PHONES (≤ 520px) ---------- */
+  @media (max-width: 520px) {
+    .container { padding: 0 18px; }
+    .section { padding: 60px 0; }
+    .page-hero { padding: 110px 0 60px; }
+
+    .page-hero-actions,
+    .contact-actions {
+      flex-direction: column;
+      width: 100%;
+      gap: 10px;
+    }
+    .page-hero-actions .btn,
+    .contact-actions .btn {
+      width: 100%;
+      justify-content: center;
+      padding: 15px 22px;
+      font-size: 0.9rem;
+    }
+
+    .page-hero h1 .highlight { padding: 0 8px; border-radius: 10px; }
+
+    /* Timeline */
+    .timeline-section { padding: 70px 0 90px; }
+    .tl-thread { left: 12px; }
+    .tl-item { padding-left: 44px; }
+    .tl-eyelet { left: 12px; width: 20px; height: 20px; }
+    .tl-item.left .tl-card::after,
+    .tl-item.right .tl-card::after {
+      left: -32px;
+      width: 30px;
+    }
+    .tl-card { padding: 34px 16px 20px; }
+    .tl-card h3 { font-size: 0.96rem; }
+    .tl-card p { font-size: 0.85rem; }
+    .tl-list li { font-size: 0.8rem; }
+
+    /* Stats: keep 2-col but tighter */
+    .stats-grid { gap: 12px; }
+    .stat-num { font-size: 1.7rem; }
+    .stat-lbl { font-size: 0.6rem; letter-spacing: 0.12em; }
+
+    /* Education, Wins */
+    .edu-card, .win-card { padding: 22px 18px 20px; }
+    .edu-icon, .win-icon { width: 42px; height: 42px; font-size: 1.15rem; }
+
+    /* Next grid */
+    .next-col { padding: 22px 18px; }
+    .next-col h3 { font-size: 0.94rem; }
+
+    /* Testimonial */
+    .testimonial { padding: 70px 0; }
+    .testimonial-card { padding: 34px 20px 26px; }
+    .testimonial-card blockquote { font-size: 0.94rem; }
+
+    .contact { padding: 80px 0; }
+    .contact p { font-size: 0.95rem; }
+
+    .footer { padding: 30px 0 110px; }
+    .footer .container { flex-direction: column; text-align: center; gap: 18px; }
+
+    .float-cta { right: 14px; bottom: 14px; height: 54px; }
+    .float-cta-icon { flex: 0 0 48px; font-size: 1.05rem; }
+  }
+
+  /* ---------- VERY SMALL PHONES (≤ 380px) ---------- */
+  @media (max-width: 380px) {
+    .container { padding: 0 14px; }
+    .section { padding: 52px 0; }
+    .page-hero { padding: 100px 0 50px; }
+
+    .page-hero-lede { font-size: 0.95rem; }
+
+    .eyebrow { font-size: 0.7rem; padding: 7px 13px; letter-spacing: 0.18em; }
+
+    .tl-card h3 { font-size: 0.92rem; }
+    .tl-card p, .tl-list li { font-size: 0.82rem; }
+
+    .btn { font-size: 0.82rem; padding: 13px 18px; }
+
+    /* Stats: single column on the very smallest */
+    .stats-grid { grid-template-columns: 1fr; gap: 4px; }
+    .stat-block { padding: 12px 8px; }
+    .stat-num { font-size: 1.6rem; }
+
+    .testimonial-card { padding: 32px 16px 24px; }
+    .testimonial-quote-mark { width: 42px; height: 42px; font-size: 1.4rem; top: -21px; left: 16px; padding-top: 10px; }
+  }
+
+  /* ---------- LANDSCAPE PHONES ---------- */
+  @media (max-width: 768px) and (orientation: landscape) {
+    .page-hero { padding: 110px 0 60px; }
+  }
+
+  /* ---------- REDUCED MOTION ---------- */
+  @media (prefers-reduced-motion: reduce) {
+    .reveal { opacity: 1; transform: none; transition: none; }
+    .tl-item { opacity: 1; }
+    .tl-item .tl-card { transform: none; }
+    .tl-eyelet { transform: translate(-50%, -50%) scale(1); }
+    .needle-pulse, .stitch-spin { animation: none; }
+  }
+
+  /* ============================================================ */
+  /* ============ CASE FILES — TESTIMONIAL DRAWER =============== */
+  /* ============================================================ */
+
+  .casefiles {
+    background-color: var(--paper-3);
+    background-image:
+      linear-gradient(rgba(14,14,14,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(14,14,14,0.04) 1px, transparent 1px);
+    background-size: 34px 34px;
+    border-top: var(--border);
+    border-bottom: var(--border);
+  }
+
+  /* ---- the cabinet ---- */
+  .cabinet {
+    position: relative;
+    overflow: hidden;
+    background:
+      repeating-linear-gradient(90deg, rgba(255,255,255,0.045) 0 2px, transparent 2px 6px),
+      linear-gradient(180deg, #605E58 0%, #47453F 58%, #33322E 100%);
+    border: var(--border);
+    border-radius: 18px;
+    padding: 22px 22px 0;
+    box-shadow: var(--shadow-lg);
+  }
+
+  .cabinet-rail {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 18px;
+  }
+  .rivet {
+    flex: 0 0 auto;
+    width: 9px; height: 9px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 35% 30%, #E6E3DA, #7C7A73 55%, #2A2A27 100%);
+    box-shadow: 0 1px 1px rgba(0,0,0,0.7);
+  }
+  .cabinet-plate {
+    flex: 1 1 auto;
+    min-width: 0;
+    text-align: center;
+    font-family: 'Special Elite', 'Courier New', monospace;
+    font-size: 0.62rem;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: rgba(245,239,225,0.6);
+    padding: 8px 6px;
+    border-top: 2px dashed rgba(245,239,225,0.16);
+    border-bottom: 2px dashed rgba(245,239,225,0.16);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  /* ---- folder tabs ---- */
+  .drawer { position: relative; }
+
+  .drawer-tabs {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    gap: 5px;
+    padding: 0 10px;
+    margin-bottom: -3px;
+  }
+
+  .ftab {
+    flex: 0 0 auto;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 0.66rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink);
+    background: var(--wood-dark);
+    border: 3px solid var(--ink);
+    border-bottom: none;
+    border-radius: 11px 11px 0 0;
+    padding: 9px 14px 12px;
+    cursor: pointer;
+    transition: background 0.18s ease, padding 0.18s ease, transform 0.18s ease;
+  }
+  .ftab-no {
+    font-family: 'Special Elite', 'Courier New', monospace;
+    font-size: 0.6rem;
+    line-height: 1;
+    opacity: 0.72;
+    padding-right: 7px;
+    border-right: 2px solid rgba(14,14,14,0.28);
+  }
+  .ftab:hover { background: var(--wood); transform: translateY(-2px); }
+  .ftab:focus-visible { outline: 3px solid var(--yellow); outline-offset: 2px; }
+  .ftab.is-active {
+    background: var(--wood);
+    padding-top: 14px;
+    padding-bottom: 14px;
+    transform: none;
+    cursor: default;
+  }
+
+  /* ---- drawer interior ---- */
+  .drawer-mouth {
+    position: relative;
+    z-index: 1;
+    margin: 0 -22px;
+    padding: 28px 46px 32px;
+    min-height: 430px;
+    background: linear-gradient(180deg, #2E2D29 0%, #201F1C 45%, #141312 100%);
+    border-top: 3px solid var(--ink);
+    overflow: hidden;
+    box-shadow: inset 0 18px 34px rgba(0,0,0,0.8);
+  }
+
+  /* ---- folder ---- */
+  .folder { display: none; }
+  .folder.is-active {
+    display: block;
+    animation: folder-rise 0.45s cubic-bezier(0.34, 1.35, 0.64, 1) both;
+  }
+  @keyframes folder-rise {
+    from { opacity: 0; transform: translateY(34px) rotate(-0.8deg); }
+    to   { opacity: 1; transform: translateY(0) rotate(0deg); }
+  }
+
+  .folder-sheet {
+    position: relative;
+    background: linear-gradient(180deg, #F4DBAF 0%, var(--wood) 62%, var(--wood-dark) 100%);
+    border: 3px solid var(--ink);
+    border-radius: 6px;
+    padding: 32px 30px 24px;
+    box-shadow:
+      8px 8px 0 rgba(0,0,0,0.55),
+      inset 0 2px 0 rgba(255,255,255,0.5);
+  }
+
+  .paperclip {
+    position: absolute;
+    top: -16px;
+    right: 34px;
+    width: 34px;
+    height: 34px;
+    color: var(--ink);
+    transform: rotate(-12deg);
+    pointer-events: none;
+    z-index: 4;
+    filter: drop-shadow(2px 2px 0 rgba(0,0,0,0.3));
+  }
+
+  .folder-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 18px;
+  }
+  .folder-exhibit {
+    font-family: 'Special Elite', 'Courier New', monospace;
+    font-size: 0.6rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    background: var(--ink);
+    color: var(--wood);
+    border-radius: 3px;
+    padding: 6px 11px;
+  }
+  .folder-stamp {
+    font-family: 'Special Elite', 'Courier New', monospace;
+    font-size: 0.6rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #B23A2E;
+    border: 3px double #B23A2E;
+    border-radius: 4px;
+    padding: 5px 10px;
+    transform: rotate(-5deg);
+    opacity: 0.82;
+    white-space: nowrap;
+  }
+
+  .folder-quote {
+    font-family: 'Courier Prime', 'Courier New', monospace;
+    font-size: clamp(0.92rem, 1.35vw, 1.08rem);
+    line-height: 1.85;
+    color: #241F18;
+    max-width: 62ch;
+    margin-bottom: 22px;
+  }
+  .folder-quote strong {
+    background: var(--yellow);
+    padding: 0 4px;
+    border-radius: 2px;
+    box-shadow: 0 1px 0 rgba(14,14,14,0.15);
+  }
+
+  .folder-attr {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 14px;
+    padding-top: 18px;
+    border-top: 2px dashed rgba(14,14,14,0.28);
+  }
+  .attr-avatar {
+    flex: 0 0 auto;
+    width: 48px; height: 48px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.3rem;
+    background: var(--pink);
+    border: 3px solid var(--ink);
+    border-radius: 50%;
+    box-shadow: 3px 3px 0 var(--ink);
+  }
+  .attr-avatar.a2 { background: var(--green); }
+  .attr-avatar.a3 { background: var(--blue); }
+  .attr-avatar.a4 { background: var(--yellow); }
+  .attr-avatar.a5 { background: var(--orange); }
+  .attr-avatar.a6 { background: var(--purple); color: #fff; }
+
+  .attr-id { flex: 1 1 auto; min-width: 0; }
+  .attr-name {
+    font-family: var(--font-display);
+    font-size: 0.86rem;
+    text-transform: uppercase;
+    letter-spacing: -0.01em;
+    line-height: 1.2;
+    margin-bottom: 3px;
+  }
+  .attr-role {
+    font-family: 'Courier Prime', 'Courier New', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #4A3F30;
+  }
+  .attr-date {
+    flex: 0 0 auto;
+    font-family: 'Courier Prime', 'Courier New', monospace;
+    font-size: 0.62rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #6A5A44;
+    border: 2px solid rgba(14,14,14,0.35);
+    border-radius: 3px;
+    padding: 4px 8px;
+    transform: rotate(-2deg);
+  }
+
+  /* ---- drawer front ---- */
+  .drawer-front {
+    position: relative;
+    margin: 0 -22px;
+    padding: 20px 30px 26px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background:
+      repeating-linear-gradient(90deg, rgba(255,255,255,0.05) 0 2px, transparent 2px 6px),
+      linear-gradient(180deg, #5A5852 0%, #3E3D38 65%, #2E2D2A 100%);
+    border-top: 3px solid var(--ink);
+  }
+  .drawer-label {
+    flex: 1 1 auto;
+    min-width: 0;
+    background: linear-gradient(180deg, #FBF7EC, var(--paper));
+    border: 3px solid var(--ink);
+    border-radius: 6px;
+    padding: 10px 18px;
+    box-shadow: inset 0 -3px 0 rgba(14,14,14,0.12);
+  }
+  .drawer-label-top {
+    display: block;
+    font-family: 'Special Elite', 'Courier New', monospace;
+    font-size: 0.54rem;
+    letter-spacing: 0.26em;
+    text-transform: uppercase;
+    color: var(--purple);
+    margin-bottom: 4px;
+  }
+  .drawer-label-main {
+    display: block;
+    font-family: var(--font-display);
+    font-size: clamp(0.8rem, 1.6vw, 1.05rem);
+    text-transform: uppercase;
+    letter-spacing: -0.01em;
+    line-height: 1.1;
+  }
+  .drawer-handle {
+    flex: 0 0 auto;
+    width: 100px;
+    height: 24px;
+    border: 3px solid var(--ink);
+    border-radius: 100px;
+    background: linear-gradient(180deg, #D6D2C8 0%, #9A968C 55%, #6E6A62 100%);
+    box-shadow:
+      inset 0 3px 0 rgba(255,255,255,0.55),
+      inset 0 -4px 8px rgba(0,0,0,0.35);
+  }
+
+  /* ---- drawer responsive ---- */
+  @media (max-width: 960px) {
+    .drawer-mouth { padding: 24px 34px 28px; min-height: 380px; }
+  }
+
+  @media (max-width: 768px) {
+    .cabinet { padding: 14px 14px 0; border-radius: 14px; }
+    .cabinet-rail { gap: 6px; margin-bottom: 14px; }
+    .rivet { width: 7px; height: 7px; }
+    .cabinet-plate { font-size: 0.54rem; letter-spacing: 0.16em; padding: 6px 4px; }
+
+    .drawer-tabs { padding: 0 4px; gap: 4px; }
+    .ftab {
+      font-size: 0.58rem;
+      padding: 7px 10px 10px;
+      border-width: 2px;
+      border-radius: 9px 9px 0 0;
+      gap: 5px;
+    }
+    .ftab.is-active { padding-top: 11px; padding-bottom: 11px; }
+    .ftab-no { font-size: 0.54rem; padding-right: 5px; }
+
+    .drawer-mouth { margin: 0 -14px; padding: 20px 20px 24px; min-height: 0; }
+    .folder-sheet {
+      padding: 26px 18px 20px;
+      box-shadow: 6px 6px 0 rgba(0,0,0,0.55), inset 0 2px 0 rgba(255,255,255,0.5);
+    }
+    .folder-head { margin-bottom: 14px; gap: 8px; }
+    .folder-exhibit { font-size: 0.55rem; padding: 5px 9px; }
+    .folder-stamp { font-size: 0.54rem; padding: 4px 8px; }
+    .folder-quote { font-size: 0.9rem; line-height: 1.75; margin-bottom: 18px; max-width: none; }
+    .paperclip { width: 28px; height: 28px; top: -13px; right: 22px; }
+    .folder-attr { gap: 11px; padding-top: 14px; }
+    .attr-avatar { width: 40px; height: 40px; font-size: 1.1rem; box-shadow: 2px 2px 0 var(--ink); }
+    .attr-name { font-size: 0.78rem; }
+    .attr-role { font-size: 0.62rem; }
+    .attr-date { font-size: 0.56rem; padding: 3px 7px; }
+
+    .drawer-front { margin: 0 -14px; padding: 14px 18px 18px; gap: 14px; }
+    .drawer-label { padding: 8px 13px; }
+    .drawer-label-top { font-size: 0.5rem; letter-spacing: 0.18em; }
+    .drawer-label-main { font-size: 0.86rem; }
+    .drawer-handle { width: 72px; height: 20px; }
+  }
+
+  @media (max-width: 520px) {
+    .ftab { font-size: 0.54rem; padding: 6px 8px 9px; }
+    .folder-quote { font-size: 0.86rem; }
+    .attr-date { margin-left: auto; }
+    .drawer-front { flex-direction: column; align-items: stretch; gap: 12px; padding: 14px 16px 18px; }
+    .drawer-handle { width: 100%; max-width: 160px; height: 18px; margin: 0 auto; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .folder.is-active { animation: none; }
+    .ftab { transition: none; }
+    .ftab:hover { transform: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ NAVBAR ============ -->
+<nav class="navbar">
+  <div class="container">
+    <a href="index.html" class="nav-logo"><span class="dot"></span> Mahd Maxx Creative Studio</a>
+    <div class="nav-links" id="navLinks">
+      <a href="about.html">About</a>
+      <a href="skills.html">Skills</a>
+      <a href="work.html">Work</a>
+      <a href="experience.html" class="active">Experience</a>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ============ PAGE HERO ============ -->
+<section class="page-hero">
+  <div class="page-hero-shape s1"></div>
+  <div class="page-hero-shape s2"></div>
+  <div class="container">
+    <div class="page-hero-inner">
+      <span class="eyebrow">Experience</span>
+      <h1 class="display h1">
+        The road<br />
+        that got me <span class="highlight">here.</span>
+      </h1>
+      <p class="page-hero-lede">
+        Every role taught me something I couldn't have learned any other way.
+        This is the full timeline — the wins, the detours, and the small
+        decisions that added up.
+      </p>
+      <div class="page-hero-actions">
+        <a href="#timeline" class="btn btn-primary">
+          Read the timeline
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#contact" class="btn btn-ghost">Download CV</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STATS STRIP ============ -->
+<section class="stats-strip">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-block reveal">
+        <div class="stat-num">6+</div>
+        <div class="stat-lbl">Years Working</div>
+      </div>
+      <div class="stat-block reveal">
+        <div class="stat-num">4</div>
+        <div class="stat-lbl">Roles Held</div>
+      </div>
+      <div class="stat-block reveal">
+        <div class="stat-num">3</div>
+        <div class="stat-lbl">Industries</div>
+      </div>
+      <div class="stat-block reveal">
+        <div class="stat-num">12+</div>
+        <div class="stat-lbl">Teammates Mentored</div>
+      </div>
+      <div class="stat-block reveal">
+        <div class="stat-num">∞</div>
+        <div class="stat-lbl">Lessons Learned</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TIMELINE ============ -->
+<section class="timeline-section" id="timeline">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow purple">The timeline</span>
+      <h2 class="display h2">Every chapter,<br />in order.</h2>
+      <p>A thread sewn through every role — what I did, what I learned, and the tools I picked up along the way.</p>
+    </div>
+
+    <div class="timeline-wrapper" id="timelineWrapper">
+      <div class="tl-thread">
+        <div class="tl-thread-progress" id="tlProgress"></div>
+      </div>
+
+      <div class="tl-items">
+
+        <!-- ROLE 1 -->
+        <div class="tl-item left" data-tl>
+          <div class="tl-eyelet"></div>
+          <div class="tl-card">
+            <div class="tl-head">
+              <span class="tl-year">2025 — Now</span>
+              <span class="tl-type">Full-time</span>
+            </div>
+            <h3>Senior Frontend Developer</h3>
+            <div class="tl-company">Company Name · Remote</div>
+            <p>
+              Leading frontend architecture for a product used by thousands of
+              people daily. My job is a mix of engineering, design sense, and
+              making sure the team doesn't accidentally build three versions
+              of the same button.
+            </p>
+            <ul class="tl-list">
+              <li>Own architecture decisions for a large React + TypeScript codebase</li>
+              <li>Mentor three junior developers through code review and pairing</li>
+              <li>Cut initial page load time by ~40% through bundling and caching work</li>
+              <li>Introduced a design-token system that unified three product teams</li>
+            </ul>
+            <div class="tl-stack">
+              <span>React</span><span>TypeScript</span><span>Design systems</span><span>Mentoring</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ROLE 2 -->
+        <div class="tl-item right" data-tl>
+          <div class="tl-eyelet"></div>
+          <div class="tl-card">
+            <div class="tl-head">
+              <span class="tl-year">2023 — 2025</span>
+              <span class="tl-type">Full-time</span>
+            </div>
+            <h3>Full-Stack Developer</h3>
+            <div class="tl-company">Company Name · Hybrid</div>
+            <p>
+              Built features end-to-end — from database schema to the last
+              pixel of the UI. Learned to love the unglamorous backend work
+              that makes everything else possible.
+            </p>
+            <ul class="tl-list">
+              <li>Shipped 20+ features across a Node + PostgreSQL stack</li>
+              <li>Designed and documented the company's first public REST API</li>
+              <li>Collaborated weekly with designers to close the design-dev gap</li>
+              <li>Contributed several fixes back to open-source dependencies</li>
+            </ul>
+            <div class="tl-stack">
+              <span>Node</span><span>PostgreSQL</span><span>REST APIs</span><span>React</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ROLE 3 -->
+        <div class="tl-item left" data-tl>
+          <div class="tl-eyelet"></div>
+          <div class="tl-card">
+            <div class="tl-head">
+              <span class="tl-year">2021 — 2023</span>
+              <span class="tl-type">Full-time</span>
+            </div>
+            <h3>Junior Developer</h3>
+            <div class="tl-company">Company Name · On-site</div>
+            <p>
+              Where I actually learned to be a developer. First real codebase,
+              first real code reviews, first real production incident at 2am.
+              Wouldn't trade it for anything.
+            </p>
+            <ul class="tl-list">
+              <li>Built responsive marketing pages and internal tools</li>
+              <li>Learned Git, testing, and how to ask good questions</li>
+              <li>Picked up backend basics by volunteering for the unglamorous tickets</li>
+              <li>Shipped my first feature that real customers used daily</li>
+            </ul>
+            <div class="tl-stack">
+              <span>HTML/CSS</span><span>JavaScript</span><span>Git</span><span>Agile</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ROLE 4 -->
+        <div class="tl-item right" data-tl>
+          <div class="tl-eyelet"></div>
+          <div class="tl-card">
+            <div class="tl-head">
+              <span class="tl-year">2019 — 2021</span>
+              <span class="tl-type">Freelance</span>
+            </div>
+            <h3>Freelance Designer</h3>
+            <div class="tl-company">Self-employed · Remote</div>
+            <p>
+              Where the storytelling habit began. Designed brand identities
+              and landing pages for small businesses — learning that
+              communication is half the job.
+            </p>
+            <ul class="tl-list">
+              <li>Delivered 15+ brand identities and marketing sites</li>
+              <li>Ran the entire client relationship solo — briefs, estimates, delivery</li>
+              <li>Learned to say no to projects that weren't the right fit</li>
+              <li>Built the design instincts that still shape everything I make</li>
+            </ul>
+            <div class="tl-stack">
+              <span>Figma</span><span>Branding</span><span>Client work</span><span>Print</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ORIGIN -->
+        <div class="tl-item left" data-tl>
+          <div class="tl-eyelet"></div>
+          <div class="tl-card">
+            <div class="tl-head">
+              <span class="tl-year">2018 — 2019</span>
+              <span class="tl-type">Before all this</span>
+            </div>
+            <h3>Learning in the Open</h3>
+            <div class="tl-company">Self-taught · Everywhere</div>
+            <p>
+              The chapter before the résumé. Tutorials, broken side projects,
+              late nights, and the very first moment a program I wrote did
+              something I didn't expect.
+            </p>
+            <ul class="tl-list">
+              <li>Taught myself HTML, CSS, and JavaScript through projects</li>
+              <li>Built and abandoned a dozen unfinished apps (all worth it)</li>
+              <li>First paid gig was a friend's band website — still proud of it</li>
+            </ul>
+            <div class="tl-stack">
+              <span>Self-taught</span><span>HTML</span><span>CSS</span><span>JavaScript</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EDUCATION / CERTS ============ -->
+<section class="section edu" id="education">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow green">Education & certs</span>
+      <h2 class="display h2">Where I learned<br />the formal stuff.</h2>
+      <p>The pieces of paper — plus the courses that actually changed how I work.</p>
+    </div>
+
+    <div class="edu-grid">
+      <div class="edu-card reveal">
+        <div class="edu-icon">🎓</div>
+        <div class="edu-kind">Degree</div>
+        <h3>BSc Computer Science</h3>
+        <div class="edu-where">University Name · 2019 — 2023</div>
+        <p>
+          Focused on software engineering, algorithms, and human-computer
+          interaction. Final project was an interactive storytelling tool
+          that still feels like a seed for something bigger.
+        </p>
+      </div>
+
+      <div class="edu-card reveal">
+        <div class="edu-icon">📜</div>
+        <div class="edu-kind">Certification</div>
+        <h3>Unity Certified Developer</h3>
+        <div class="edu-where">Unity · 2023</div>
+        <p>
+          Covered engine internals, gameplay systems, optimization, and
+          production workflows. The best part was learning what I didn't
+          know I didn't know.
+        </p>
+      </div>
+
+      <div class="edu-card reveal">
+        <div class="edu-icon">🎨</div>
+        <div class="edu-kind">Course</div>
+        <h3>UI / UX Design Fundamentals</h3>
+        <div class="edu-where">Online · 2021</div>
+        <p>
+          The course that made me stop thinking of design as "make it pretty"
+          and start thinking of it as "make it work for the person using it."
+        </p>
+      </div>
+
+      <div class="edu-card reveal">
+        <div class="edu-icon">🔧</div>
+        <div class="edu-kind">Certification</div>
+        <h3>PostgreSQL for Developers</h3>
+        <div class="edu-where">Online · 2022</div>
+        <p>
+          Deep dive into schema design, indexing, and query planning.
+          Turned "the database is slow" from a mystery into a checklist.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WINS / HIGHLIGHTS ============ -->
+<section class="section wins">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow pink">Career highlights</span>
+      <h2 class="display h2">Moments I'm<br />proud of.</h2>
+      <p>Not every win fits on a résumé line — these are the ones that meant the most.</p>
+    </div>
+
+    <div class="wins-grid">
+      <div class="win-card reveal">
+        <div class="win-icon">🚀</div>
+        <h3>Cut load time by 40%</h3>
+        <p>Rewrote the bundling and caching strategy for a production app and watched the "it feels slow" complaints stop entirely. Best feedback I've ever gotten was the silence.</p>
+      </div>
+
+      <div class="win-card reveal">
+        <div class="win-icon">🎮</div>
+        <h3>Shipped my first game</h3>
+        <p>Months of evenings and weekends turned into a small narrative game that real people finished. Watching someone play something I made still doesn't get old.</p>
+      </div>
+
+      <div class="win-card reveal">
+        <div class="win-icon">🌱</div>
+        <h3>Mentored 12 developers</h3>
+        <p>Helped junior devs go from "I'm scared to push" to "I just shipped my first feature." The confidence they gained is worth more than any of my code.</p>
+      </div>
+
+      <div class="win-card reveal">
+        <div class="win-icon">🤝</div>
+        <h3>Bridged design & dev</h3>
+        <p>Introduced a shared token system and weekly design reviews — the "why does this look different in production?" meeting finally stopped happening.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIAL ============ -->
+<section class="testimonial">
+  <div class="container">
+    <div class="testimonial-card reveal">
+      <div class="testimonial-quote-mark">"</div>
+      <blockquote>
+        Working with Maxx was one of the easiest collaborations I've had.
+        He doesn't just take the brief — he <strong>asks the questions you forgot
+        to answer</strong>, and the final product is always better for it. He
+        genuinely cares about the person on the other side of the screen.
+      </blockquote>
+      <div class="testimonial-attr">
+        <div class="testimonial-avatar">🙂</div>
+        <div>
+          <div class="testimonial-name">Former Teammate</div>
+          <div class="testimonial-role">Product Manager · Company Name</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> 
+
+<!-- ============ CASE FILES / TESTIMONIAL DRAWER ============ -->
+<section class="section casefiles" id="case-files">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow blue">Testimonials</span>
+      <h2 class="display h2">The evidence<br />drawer.</h2>
+      <p>Statements from people who were actually in the room.</p>
+    </div>
+
+    <div class="cabinet reveal">
+      <div class="cabinet-rail" aria-hidden="true">
+        <span class="rivet"></span>
+        <span class="rivet"></span>
+        <span class="cabinet-plate">Case No. MM-2026 · Testimonial Records · Do Not Remove</span>
+        <span class="rivet"></span>
+        <span class="rivet"></span>
+      </div>
+
+      <div class="drawer">
+        <div class="drawer-tabs" role="tablist" aria-label="Testimonial case files">
+          <button class="ftab is-active" role="tab" id="tab-1" aria-controls="file-1" aria-selected="true" data-file="1">
+            <span class="ftab-no">01</span> The PM
+          </button>
+          <button class="ftab" role="tab" id="tab-2" aria-controls="file-2" aria-selected="false" data-file="2" tabindex="-1">
+            <span class="ftab-no">02</span> The Lead
+          </button>
+          <button class="ftab" role="tab" id="tab-3" aria-controls="file-3" aria-selected="false" data-file="3" tabindex="-1">
+            <span class="ftab-no">03</span> The Designer
+          </button>
+          <button class="ftab" role="tab" id="tab-4" aria-controls="file-4" aria-selected="false" data-file="4" tabindex="-1">
+            <span class="ftab-no">04</span> The Mentee
+          </button>
+          <button class="ftab" role="tab" id="tab-5" aria-controls="file-5" aria-selected="false" data-file="5" tabindex="-1">
+            <span class="ftab-no">05</span> The Client
+          </button>
+          <button class="ftab" role="tab" id="tab-6" aria-controls="file-6" aria-selected="false" data-file="6" tabindex="-1">
+            <span class="ftab-no">06</span> The Founder
+          </button>
+        </div>
+
+        <div class="drawer-mouth">
+
+          <!-- FILE 01 -->
+          <article class="folder is-active" role="tabpanel" id="file-1" aria-labelledby="tab-1">
+            <div class="folder-sheet">
+              <svg class="paperclip" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"/></svg>
+              <div class="folder-head">
+                <span class="folder-exhibit">Exhibit A</span>
+                <span class="folder-stamp">Brilliant</span>
+              </div>
+              <blockquote class="folder-quote">
+                We hired Maxx to build a feature. He came back with three
+                questions about the problem, <strong>two of which we couldn't
+                answer</strong>. That one meeting saved us six weeks of building
+                the wrong thing.
+              </blockquote>
+              <div class="folder-attr">
+                <div class="attr-avatar a1" aria-hidden="true">🗂️</div>
+                <div class="attr-id">
+                  <div class="attr-name">Product Manager</div>
+                  <div class="attr-role">Former teammate · Company Name</div>
+                </div>
+                <div class="attr-date">Filed 03 / 2026</div>
+              </div>
+            </div>
+          </article>
+
+          <!-- FILE 02 -->
+          <article class="folder" role="tabpanel" id="file-2" aria-labelledby="tab-2" hidden>
+            <div class="folder-sheet">
+              <svg class="paperclip" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"/></svg>
+              <div class="folder-head">
+                <span class="folder-exhibit">Exhibit B</span>
+                <span class="folder-stamp">Reliable</span>
+              </div>
+              <blockquote class="folder-quote">
+                I've reviewed a lot of pull requests. Maxx's are the only ones
+                where I learn something. He writes code like someone's going to
+                read it at 2am during an incident — <strong>because he's been
+                that person</strong>, and he refuses to be the reason.
+              </blockquote>
+              <div class="folder-attr">
+                <div class="attr-avatar a2" aria-hidden="true">🧭</div>
+                <div class="attr-id">
+                  <div class="attr-name">Engineering Lead</div>
+                  <div class="attr-role">Manager · Company Name</div>
+                </div>
+                <div class="attr-date">Filed 11 / 2025</div>
+              </div>
+            </div>
+          </article>
+
+          <!-- FILE 03 -->
+          <article class="folder" role="tabpanel" id="file-3" aria-labelledby="tab-3" hidden>
+            <div class="folder-sheet">
+              <svg class="paperclip" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"/></svg>
+              <div class="folder-head">
+                <span class="folder-exhibit">Exhibit C</span>
+                <span class="folder-stamp">Innovative</span>
+              </div>
+              <blockquote class="folder-quote">
+                Most developers treat a design file like a spec to be obeyed.
+                Maxx treats it like a conversation. Half the best ideas in our
+                last release started with him saying <strong>"what if we tried
+                this instead?"</strong> — and he was right more often than not.
+              </blockquote>
+              <div class="folder-attr">
+                <div class="attr-avatar a3" aria-hidden="true">🎨</div>
+                <div class="attr-id">
+                  <div class="attr-name">Senior Product Designer</div>
+                  <div class="attr-role">Design partner · Company Name</div>
+                </div>
+                <div class="attr-date">Filed 08 / 2025</div>
+              </div>
+            </div>
+          </article>
+
+          <!-- FILE 04 -->
+          <article class="folder" role="tabpanel" id="file-4" aria-labelledby="tab-4" hidden>
+            <div class="folder-sheet">
+              <svg class="paperclip" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"/></svg>
+              <div class="folder-head">
+                <span class="folder-exhibit">Exhibit D</span>
+                <span class="folder-stamp">Competent</span>
+              </div>
+              <blockquote class="folder-quote">
+                Three weeks into my first job, I was terrified of breaking
+                production. Maxx walked through my first real PR line by line
+                and <strong>never once made me feel stupid for asking</strong>.
+                A year later I shipped a feature on my own.
+              </blockquote>
+              <div class="folder-attr">
+                <div class="attr-avatar a4" aria-hidden="true">🌱</div>
+                <div class="attr-id">
+                  <div class="attr-name">Junior Developer</div>
+                  <div class="attr-role">Mentee · 2024 cohort</div>
+                </div>
+                <div class="attr-date">Filed 06 / 2025</div>
+              </div>
+            </div>
+          </article>
+
+          <!-- FILE 05 -->
+          <article class="folder" role="tabpanel" id="file-5" aria-labelledby="tab-5" hidden>
+            <div class="folder-sheet">
+              <svg class="paperclip" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"/></svg>
+              <div class="folder-head">
+                <span class="folder-exhibit">Exhibit E</span>
+                <span class="folder-stamp">Intentional</span>
+              </div>
+              <blockquote class="folder-quote">
+                I hired a web designer and got a business partner for six weeks.
+                He pushed back on things I asked for — kindly, but firmly — and
+                every single time he was <strong>protecting the project, not his
+                ego</strong>.
+              </blockquote>
+              <div class="folder-attr">
+                <div class="attr-avatar a5" aria-hidden="true">☕</div>
+                <div class="attr-id">
+                  <div class="attr-name">Small Business Owner</div>
+                  <div class="attr-role">Freelance client · 2020</div>
+                </div>
+                <div class="attr-date">Filed 02 / 2022</div>
+              </div>
+            </div>
+          </article>
+
+          <!-- FILE 06 -->
+          <article class="folder" role="tabpanel" id="file-6" aria-labelledby="tab-6" hidden>
+            <div class="folder-sheet">
+              <svg class="paperclip" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"/></svg>
+              <div class="folder-head">
+                <span class="folder-exhibit">Exhibit F</span>
+                <span class="folder-stamp">Trust Worthy</span>
+              </div>
+              <blockquote class="folder-quote">
+                We brought Maxx in to fix a performance problem. He fixed it,
+                then quietly rewrote the parts nobody asked him to touch so it
+                wouldn't come back. That's the difference between
+                <strong>doing a job and owning it</strong>.
+              </blockquote>
+              <div class="folder-attr">
+                <div class="attr-avatar a6" aria-hidden="true">🚀</div>
+                <div class="attr-id">
+                  <div class="attr-name">Co-founder</div>
+                  <div class="attr-role">Startup · Contract work</div>
+                </div>
+                <div class="attr-date">Filed 09 / 2025</div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+
+      <div class="drawer-front" aria-hidden="true">
+        <div class="drawer-label">
+          <span class="drawer-label-top">Mahd Maxx Creative Studio</span>
+          <span class="drawer-label-main">Testimonials — 6 Files</span>
+        </div>
+        <div class="drawer-handle"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LOOKING FOR NEXT ============ -->
+<section class="section next">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow yellow">What's next</span>
+      <h2 class="display h2">Looking for<br />the right fit.</h2>
+      <p>Not just any role — the right one. Here's what I'm chasing and what I'm not.</p>
+    </div>
+
+    <div class="next-grid">
+      <div class="next-col want reveal">
+        <h3><span class="ico">🎯</span> What I'm looking for</h3>
+        <ul class="next-list">
+          <li>Teams that care about craft over churn</li>
+          <li>Work where design and engineering actually collaborate</li>
+          <li>Products with real users and real stakes</li>
+          <li>Room to grow into technical leadership</li>
+          <li>Remote-first or hybrid with flexible hours</li>
+          <li>Projects that make people feel something</li>
+        </ul>
+      </div>
+
+      <div class="next-col not reveal">
+        <h3><span class="ico">🚫</span> What I'm not looking for</h3>
+        <ul class="next-list">
+          <li>Environments where "ship it" means "skip the details"</li>
+          <li>Endless meetings that could've been a document</li>
+          <li>Teams where design is treated as an afterthought</li>
+          <li>Work that exists only to satisfy a metric</li>
+          <li>Companies that treat burnout as a badge of honor</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="section contact" id="contact">
+  <div class="contact-shape c1"></div>
+  <div class="contact-shape c2"></div>
+  <div class="contact-shape c3"></div>
+  <div class="container">
+    <span class="eyebrow reveal">Get In Touch</span>
+    <h2 class="display h2 reveal">Want to work<br />together?</h2>
+    <p class="reveal">
+      If this looks like the kind of person you'd want on your team — or
+      building your project — I'd love to hear about it. I reply to every
+      message.
+    </p>
+    <div class="contact-actions reveal">
+      <a href="mailto:your@email.com" class="btn btn-primary">
+        Email Me
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a href="#" class="btn btn-ghost">Download CV</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-logo"><span class="dot"></span> Mahd Maxx Creative Studio</div>
+    <div class="footer-socials">
+      <a href="mailto:your@email.com" aria-label="Email">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+      </a>
+      <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+      </a>
+      <a href="https://github.com/yourusername" target="_blank" rel="noopener" aria-label="GitHub">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+      </a>
+      <a href="https://twitter.com/yourusername" target="_blank" rel="noopener" aria-label="Twitter">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
+      </a>
+    </div>
+    <div class="footer-copy">© 2026 Mahd Maxx Creative Studio. All rights reserved.</div>
+  </div>
+</footer>
+
+<!-- ============ FLOATING CTA ============ -->
+<a href="#contact" class="float-cta" aria-label="Let's talk">
+  <span class="float-cta-icon" aria-hidden="true">★</span>
+  <span class="float-cta-label">Let's Talk</span>
+</a>
+
+<script>
+  /* ---------- Mobile menu ---------- */
+  const navToggle = document.getElementById('navToggle');
+  const navLinks  = document.getElementById('navLinks');
+
+  function closeMenu() {
+    navToggle.classList.remove('active');
+    navLinks.classList.remove('open');
+    navToggle.setAttribute('aria-expanded', 'false');
+  }
+  function toggleMenu() {
+    const isOpen = navLinks.classList.toggle('open');
+    navToggle.classList.toggle('active', isOpen);
+    navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  }
+
+  navToggle.setAttribute('aria-expanded', 'false');
+  navToggle.addEventListener('click', (e) => {
+    e.stopPropagation();
+    toggleMenu();
+  });
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+  document.addEventListener('click', (e) => {
+    if (!navLinks.classList.contains('open')) return;
+    if (navLinks.contains(e.target) || navToggle.contains(e.target)) return;
+    closeMenu();
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeMenu();
+  });
+
+  /* ---------- Scroll reveal ---------- */
+  const revealIO = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        revealIO.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => revealIO.observe(el));
+
+  /* ---------- Timeline activate ---------- */
+  const tlItems = document.querySelectorAll('[data-tl]');
+  const tlIO = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) e.target.classList.add('active');
+    });
+  }, { threshold: 0.2, rootMargin: '0px 0px -60px 0px' });
+  tlItems.forEach(item => tlIO.observe(item));
+
+  /* ---------- Timeline scroll progress ---------- */
+  const timelineWrapper = document.getElementById('timelineWrapper');
+  const tlProgress = document.getElementById('tlProgress');
+  let ticking = false;
+  function updateTimelineProgress() {
+    if (!timelineWrapper || !tlProgress) return;
+    const rect = timelineWrapper.getBoundingClientRect();
+    const viewportMiddle = window.innerHeight * 0.55;
+    const scrolledPast = viewportMiddle - rect.top;
+    const total = rect.height;
+    let progress = Math.max(0, Math.min(1, scrolledPast / total));
+    tlProgress.style.height = (progress * 100) + '%';
+    ticking = false;
+  }
+  function onScroll() {
+    if (!ticking) {
+      window.requestAnimationFrame(updateTimelineProgress);
+      ticking = true;
+    }
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', updateTimelineProgress);
+  updateTimelineProgress();
+
+  /* ---------- Testimonial case files (drawer tabs) ---------- */
+  const ftabs   = Array.from(document.querySelectorAll('.ftab'));
+  const folders = Array.from(document.querySelectorAll('.folder'));
+
+  function openFile(index) {
+    ftabs.forEach((tab, i) => {
+      const on = i === index;
+      tab.classList.toggle('is-active', on);
+      tab.setAttribute('aria-selected', on ? 'true' : 'false');
+      tab.tabIndex = on ? 0 : -1;
+    });
+    folders.forEach((folder, i) => {
+      const on = i === index;
+      folder.classList.toggle('is-active', on);
+      folder.hidden = !on;
+    });
+  }
+
+  ftabs.forEach((tab, i) => {
+    tab.addEventListener('click', () => openFile(i));
+    tab.addEventListener('keydown', (e) => {
+      let target = null;
+      if (e.key === 'ArrowRight') target = (i + 1) % ftabs.length;
+      else if (e.key === 'ArrowLeft') target = (i - 1 + ftabs.length) % ftabs.length;
+      else if (e.key === 'Home') target = 0;
+      else if (e.key === 'End') target = ftabs.length - 1;
+      if (target === null) return;
+      e.preventDefault();
+      openFile(target);
+      ftabs[target].focus();
+    });
+  });
+
+  if (ftabs.length) openFile(0);
+</script>
+
+</body>
+</html>
