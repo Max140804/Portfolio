@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Home — MMCS</title>
 <meta name="description" content="Portfolio of Mahd Maxx Creative Studio — developer, designer, creator." />
+<link rel="icon" type="image/png" href="LOGO.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Archivo+Black&display=swap" rel="stylesheet" />
@@ -44,6 +45,7 @@
     -webkit-font-smoothing: antialiased;
   }
   a { color: inherit; text-decoration: none; }
+  .brand-logo { width: 34px; height: 34px; flex: 0 0 34px; object-fit: cover; border: 2px solid var(--ink); border-radius: 7px; background: #031833; }
   ul { list-style: none; }
   img { max-width: 100%; display: block; }
   button { font-family: inherit; cursor: pointer; }
@@ -400,6 +402,11 @@
     letter-spacing: 0.04em;
     position: relative;
     z-index: 1;
+
+
+
+
+    
     margin-bottom: 8px;
   }
   .deck-star {
@@ -656,9 +663,8 @@
   }
   .skill-card p { font-size: 0.9rem; color: #3a3a3a; line-height: 1.65; }
 
-  /* =================================================== */
-  /* ============ CLOTHESLINE (PROJECTS) =============== */
-  /* =================================================== */
+  /* ============ (Projects) =============== */
+
   .projects {
     background: var(--paper-2);
     border-top: var(--border);
@@ -868,9 +874,7 @@
   }
   .hang-link:hover { gap: 12px; color: var(--purple); }
 
-  /* =================================================== */
-  /* ================== TIMELINE ======================= */
-  /* =================================================== */
+
   .timeline-section {
     background: var(--paper-2);
     border-top: var(--border);
@@ -1050,7 +1054,6 @@
   .tl-item.left .tl-card:hover { transform: translateX(0) translate(-3px, -3px); }
   .tl-item.right .tl-card:hover { transform: translateX(0) translate(-3px, -3px); }
 
-  /* ============ CONTACT ============ */
   .contact {
     background: var(--purple);
     color: var(--paper);
@@ -1076,7 +1079,6 @@
   }
   .contact-actions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
 
-  /* ============ FOOTER ============ */
   .footer { background: var(--ink); color: var(--paper); padding: 36px 0 120px; }
   .footer .container {
     display: flex;
@@ -1109,7 +1111,6 @@
   .footer-socials a:hover { background: var(--yellow); transform: translateY(-2px); }
   .footer-copy { font-size: 0.8rem; opacity: 0.7; letter-spacing: 0.05em; }
 
-  /* ============ REVEAL ============ */
   .reveal {
     opacity: 0;
     transform: translateY(24px);
@@ -1117,10 +1118,7 @@
   }
   .reveal.visible { opacity: 1; transform: translateY(0); }
 
-  /* ============================================== */
-  /* ============ SUBTLE TEXTURE PATTERNS ========= */
-  /* ============================================== */
-
+  
   .hero::before {
     content: '';
     position: absolute;
@@ -1333,10 +1331,9 @@
 </head>
 <body>
 
-<!-- ============ NAVBAR ============ -->
 <nav class="navbar">
   <div class="container">
-    <a href="#top" class="nav-logo"><span class="dot"></span> Mahd Maxx Creative Studios</a>
+    <a href="#top" class="nav-logo"><img class="brand-logo" src="LOGO.png" alt="" /> Mahd Maxx Creative Studios</a>
     <div class="nav-links" id="navLinks">
       <a href="about.html">About</a>
       <a href="skills.html">Skills</a>
@@ -1349,7 +1346,6 @@
   </div>
 </nav>
 
-<!-- ============ HERO ============ -->
 <section class="hero" id="top">
   <div class="hero-shape s1"></div>
   <div class="hero-shape s3"></div>
@@ -1399,7 +1395,6 @@
   </div>
 </section>
 
-<!-- ============ MARQUEE ============ -->
 <div class="marquee" aria-hidden="true">
   <div class="marquee-track">
     <span>Available for work <span class="star">★</span> Let's build something <span class="star">★</span> Design &amp; code <span class="star">★</span> Available for work <span class="star">★</span> Let's build something <span class="star">★</span> Design &amp; code <span class="star">★</span></span>
@@ -1407,7 +1402,6 @@
   </div>
 </div>
 
-<!-- ============ ABOUT ============ -->
 <section class="section about" id="about">
   <div class="container">
     <div class="section-head reveal">
@@ -1417,7 +1411,7 @@
     <div class="about-grid">
       <div class="about-photo-wrap reveal">
         <div class="about-photo">
-          👤
+          <img src="LOGO.png" alt="Mahd Maxx Creative Studio logo" loading="lazy" />
           <div class="about-photo-sticker">Hello<br />There!</div>
         </div>
       </div>
@@ -1448,7 +1442,6 @@
   </div>
 </section>
 
-<!-- ============ SKILLS ============ -->
 <section class="section skills" id="skills">
   <div class="container">
     <div class="section-head reveal">
@@ -1497,7 +1490,6 @@
   </div>
 </section>
 
-<!-- ============ PROJECTS — CLOTHESLINE ============ -->
 <section class="projects" id="projects">
   <div class="container">
     <div class="section-head reveal">
@@ -1661,7 +1653,6 @@
   </div>
 </section>
 
-<!-- ============ TIMELINE / EXPERIENCE ============ -->
 <section class="timeline-section" id="experience">
   <div class="container">
     <div class="section-head reveal">
@@ -1717,7 +1708,6 @@
   </div>
 </section>
 
-<!-- ============ CONTACT ============ -->
 <section class="section contact" id="contact">
   <div class="contact-shape c1"></div>
   <div class="contact-shape c2"></div>
@@ -1738,10 +1728,9 @@
   </div>
 </section>
 
-<!-- ============ FOOTER ============ -->
 <footer class="footer">
   <div class="container">
-    <div class="footer-logo"><span class="dot"></span> Mahd Maxx Creative Studios</div>
+    <div class="footer-logo"><img class="brand-logo" src="LOGO.png" alt="" /> Mahd Maxx Creative Studios</div>
     <div class="footer-socials">
       <a href="mailto:mahdmaxxcreativitystudios@gmail.com" aria-label="Email">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
@@ -1760,14 +1749,12 @@
   </div>
 </footer>
 
-<!-- ============ FLOATING CTA ============ -->
 <a href="#contact" class="float-cta" aria-label="Let's talk">
   <span class="float-cta-icon" aria-hidden="true">★</span>
   <span class="float-cta-label">Let's Talk</span>
 </a>
 
 <script>
-  /* ============ HERO CARDS — auto-shuffling deck ========== */
 
   const HANDS = [
     {
@@ -1868,9 +1855,6 @@
     else startCycle();
   });
 
-  /* ============================================================
-     MOBILE MENU — floating card, close on outside click / Escape
-     ============================================================ */
   const navToggle = document.getElementById('navToggle');
   const navLinks  = document.getElementById('navLinks');
 
@@ -1892,22 +1876,18 @@
     toggleMenu();
   });
 
-  /* tapping a link closes the card (page scrolls normally behind it) */
   navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
 
-  /* tapping anywhere outside the card closes it */
   document.addEventListener('click', (e) => {
     if (!navLinks.classList.contains('open')) return;
     if (navLinks.contains(e.target) || navToggle.contains(e.target)) return;
     closeMenu();
   });
 
-  /* Escape closes it */
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') closeMenu();
   });
 
-  /* ---------- Generic scroll reveal ---------- */
   const revealIO = new IntersectionObserver((entries) => {
     entries.forEach(e => {
       if (e.isIntersecting) {
@@ -1918,7 +1898,6 @@
   }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
   document.querySelectorAll('.reveal').forEach(el => revealIO.observe(el));
 
-  /* ---------- Timeline: activate items ---------- */
   const tlItems = document.querySelectorAll('[data-tl]');
   const tlIO = new IntersectionObserver((entries) => {
     entries.forEach(e => {
@@ -1927,7 +1906,6 @@
   }, { threshold: 0.2, rootMargin: '0px 0px -60px 0px' });
   tlItems.forEach(item => tlIO.observe(item));
 
-  /* ---------- Timeline: scroll-driven solid thread ---------- */
   const timelineWrapper = document.getElementById('timelineWrapper');
   const tlProgress = document.getElementById('tlProgress');
   let ticking = false;
@@ -1951,7 +1929,6 @@
   window.addEventListener('resize', updateTimelineProgress);
   updateTimelineProgress();
 
-  /* ---------- Clothesline: seamless JS-driven infinite loop ---------- */
   const clothesViewport = document.getElementById('clotheslineViewport');
   const clothesTrack    = document.getElementById('clotheslineTrack');
 
