@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Home — MMCS</title>
-<meta name="description" content="Portfolio of Your Name — developer, designer, creator." />
+<meta name="description" content="Portfolio of Mahd Maxx Creative Studio — developer, designer, creator." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Archivo+Black&display=swap" rel="stylesheet" />
@@ -1212,7 +1212,7 @@
 
     /* little "card header" so it reads like the deck cards */
     .nav-links::before {
-      content: "★ Navigate";
+      content: "★ Menu";
       font-family: var(--font-display);
       font-size: 0.6rem;
       letter-spacing: 0.24em;
@@ -1283,12 +1283,14 @@
     .tl-items { gap: 32px; }
     .tl-item { padding-left: 60px; display: block; }
     .tl-item .tl-card {
-      width: 100%;
-      transform: translateY(30px);
       padding: 40px 22px 22px;
     }
-    .tl-item.active .tl-card { transform: translateY(0); }
-    .tl-item .tl-card:hover { transform: translate(-3px, -3px); }
+    .tl-item.left .tl-card,
+    .tl-item.right .tl-card { width: 100%; transform: translateY(30px); }
+    .tl-item.left.active .tl-card,
+    .tl-item.right.active .tl-card { transform: translateY(0); }
+    .tl-item.left .tl-card:hover,
+    .tl-item.right .tl-card:hover { transform: translateY(0) translate(-3px, -3px); }
     .tl-eyelet { left: 16px; top: 20px; width: 22px; height: 22px; }
     .tl-item.left .tl-card::after,
     .tl-item.right .tl-card::after {
@@ -1337,9 +1339,9 @@
     <a href="#top" class="nav-logo"><span class="dot"></span> Mahd Maxx Creative Studios</a>
     <div class="nav-links" id="navLinks">
       <a href="about.html">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Work</a>
-      <a href="#experience">Experience</a>
+      <a href="skills.html">Skills</a>
+      <a href="work.html">Work</a>
+      <a href="experience.html">Experience</a>
     </div>
     <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
       <span></span><span></span><span></span>

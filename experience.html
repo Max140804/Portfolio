@@ -975,12 +975,15 @@
     }
     .tl-item .tl-card {
       width: 100% !important;
-      transform: translateY(28px);
       padding: 40px 22px 24px;
       border-radius: 12px;
     }
-    .tl-item.active .tl-card { transform: translateY(0); }
-    .tl-item .tl-card:hover { transform: translate(-3px, -3px); }
+    .tl-item.left .tl-card,
+    .tl-item.right .tl-card { transform: translateY(28px); }
+    .tl-item.left.active .tl-card,
+    .tl-item.right.active .tl-card { transform: translateY(0); }
+    .tl-item.left .tl-card:hover,
+    .tl-item.right .tl-card:hover { transform: translateY(0) translate(-3px, -3px); }
     .tl-eyelet { left: 15px; top: 20px; width: 22px; height: 22px; }
     .tl-item.left .tl-card::after,
     .tl-item.right .tl-card::after {
@@ -1087,7 +1090,7 @@
       transform: translateY(0) scale(1) rotate(0deg);
     }
     .nav-links::before {
-      content: "★ Navigate";
+      content: "★ Menu";
       font-family: var(--font-display);
       font-size: 0.6rem;
       letter-spacing: 0.24em;

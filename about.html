@@ -917,12 +917,15 @@
     }
     .tl-item .tl-card {
       width: 100% !important;
-      transform: translateY(28px);
       padding: 38px 20px 22px;
       border-radius: 12px;
     }
-    .tl-item.active .tl-card { transform: translateY(0); }
-    .tl-item .tl-card:hover { transform: translate(-3px, -3px); }
+    .tl-item.left .tl-card,
+    .tl-item.right .tl-card { transform: translateY(28px); }
+    .tl-item.left.active .tl-card,
+    .tl-item.right.active .tl-card { transform: translateY(0); }
+    .tl-item.left .tl-card:hover,
+    .tl-item.right .tl-card:hover { transform: translateY(0) translate(-3px, -3px); }
     .tl-eyelet {
       left: 15px;
       top: 20px;
@@ -1019,7 +1022,7 @@
       transform: translateY(0) scale(1) rotate(0deg);
     }
     .nav-links::before {
-      content: "★ Navigate";
+      content: "★ Menu";
       font-family: var(--font-display);
       font-size: 0.6rem;
       letter-spacing: 0.24em;
@@ -1600,7 +1603,7 @@
 <!-- ============ FOOTER ============ -->
 <footer class="footer">
   <div class="container">
-    <div class="footer-logo"><span class="dot"></span> Your Name</div>
+    <div class="footer-logo"><span class="dot"></span> Mahd Maxx Creative Studio</div>
     <div class="footer-socials">
       <a href="mailto:your@email.com" aria-label="Email">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
@@ -1615,7 +1618,7 @@
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
       </a>
     </div>
-    <div class="footer-copy">© 2026 Your Name. All rights reserved.</div>
+    <div class="footer-copy">© 2026 Mahd Maxx Creative Studio. All rights reserved.</div>
   </div>
 </footer>
 
