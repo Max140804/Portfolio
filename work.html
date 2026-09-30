@@ -20,7 +20,7 @@
     --purple-deep: #021630;
     --yellow: #e89f32;
     --pink: #5BB8FF;
-    --green: #6FE39B;
+    --green: #5BB8FF;
     --orange: #FF8B3D;
     --blue: #5BB8FF;
     --border: 3px solid var(--ink);
@@ -176,11 +176,11 @@
     align-items: center;
     height: 64px;
     padding: 0;
-    background: var(--ink);
-    color: var(--paper);
+    background: var(--yellow);
+    color: var(--ink);
     border: 3px solid var(--ink);
     border-radius: 16px;
-    box-shadow: 5px 5px 0 var(--purple);
+    box-shadow: 5px 5px 0 var(--ink);
     overflow: hidden;
     white-space: nowrap;
     text-decoration: none;
@@ -195,6 +195,13 @@
     font-size: 1.3rem;
     line-height: 1;
     transition: transform 0.5s cubic-bezier(0.34, 1.6, 0.64, 1);
+  }
+  .float-cta-icon svg { display: none; }
+  .float-cta-icon::before {
+    content: '';
+    width: 22px;
+    height: 22px;
+    background: url('../assets/whatsapp.svg') center / contain no-repeat;
   }
   .float-cta-label {
     display: block;
@@ -211,14 +218,14 @@
   }
   .float-cta:hover,
   .float-cta:focus-visible {
-    background: var(--purple);
-    color: #fff;
+    background: var(--pink);
+    color: var(--ink);
     box-shadow: 8px 8px 0 var(--ink);
     transform: translate(-3px, -3px);
     outline: none;
   }
   .float-cta:hover .float-cta-icon,
-  .float-cta:focus-visible .float-cta-icon { transform: rotate(72deg); }
+  .float-cta:focus-visible .float-cta-icon { transform: scale(1.12); }
   .float-cta:hover .float-cta-label,
   .float-cta:focus-visible .float-cta-label {
     max-width: 140px;
@@ -1373,8 +1380,8 @@
 </footer>
 
 <!-- ============ FLOATING CTA ============ -->
-<a href="#contact" class="float-cta" aria-label="Let's talk">
-  <span class="float-cta-icon" aria-hidden="true">★</span>
+<a href="https://wa.me/2348051464116" class="float-cta" target="_blank" rel="noopener" aria-label="Chat with me on WhatsApp">
+  <span class="float-cta-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20l1.2-4.7a8.5 8.5 0 1 1 16.3-3.8Z"/><path d="M8.5 8.5c.3 2.2 2.8 4.7 5 5l1.2-1.2 2 1c-.2 1.4-1.3 2.4-2.7 2.2-3.6-.5-6.6-3.5-7.1-7.1-.2-1.4.8-2.5 2.2-2.7l1 2-1.6 1.8Z"/></svg></span>
   <span class="float-cta-label">Let's Talk</span>
 </a>
 
