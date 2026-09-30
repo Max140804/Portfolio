@@ -809,6 +809,7 @@
     /* Featured card */
     .featured-card { border-radius: 18px; box-shadow: 6px 6px 0 var(--ink); }
     .featured-visual {
+      width: 100%;
       aspect-ratio: 4 / 3;
       max-height: 320px;
     }
@@ -1113,40 +1114,35 @@
   <div class="container">
     <div class="section-head reveal">
       <span class="eyebrow yellow">Featured</span>
-      <h2 class="display h2">The one I'm<br />most proud of.</h2>
-      <p>If you only look at one thing on this page, make it this one.</p>
+      <h2 class="display h2">Featured project:<br />Paynote.</h2>
+      <p>A mobile application bringing store management and payment records together.</p>
     </div>
 
     <article class="featured-card reveal">
       <div class="featured-visual">
         <span class="featured-badge">★ Featured Project</span>
-        <span class="big-emoji">🛒</span>
+        <span class="big-emoji">🧾</span>
       </div>
       <div class="featured-body">
         <div class="featured-meta">
-          <span class="pill year">2024</span>
-          <span class="pill type">Full-stack</span>
+          <span class="pill year">2026</span>
+          <span class="pill type">Mobile application</span>
         </div>
-        <h3>E-Commerce Platform</h3>
+        <h3>Paynote</h3>
         <p>
-          A complete storefront built from scratch — product management, cart,
-          checkout, and secure payments, with an admin dashboard for the people
-          running it behind the scenes. Handles real traffic, real money, and
-          real edge cases without falling over.
+          A full-stack store with product management, invoicing, receipting,
+          and secure payment-slip generation.
         </p>
         <div class="featured-tags">
-          <span>React</span>
-          <span>Node</span>
-          <span>Stripe</span>
-          <span>PostgreSQL</span>
-          <span>Redis</span>
+          <span>Dart</span>
+          <span>Flutter</span>
+          <span>Android Studio</span>
         </div>
         <div class="featured-actions">
-          <a href="#" class="btn btn-primary">
-            View case study
+          <a href="https://wa.me/2348051464116?text=I'd%20like%20to%20know%20more%20about%20Paynote" class="btn btn-primary" target="_blank" rel="noopener">
+            Ask about Paynote
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </a>
-          <a href="#" class="btn btn-ghost">Live site</a>
         </div>
       </div>
     </article>
@@ -1157,195 +1153,114 @@
 <section class="section work-main" id="projects">
   <div class="container">
     <div class="section-head reveal">
-      <span class="eyebrow purple">All projects</span>
-      <h2 class="display h2">The full catalogue.</h2>
-      <p>Filter by what you're curious about — or just scroll and see what catches your eye.</p>
+      <span class="eyebrow purple">Selected projects</span>
+      <h2 class="display h2">Ideas made real.</h2>
+      <p>A selection of games, apps, and visual work from a broader body of 32+ shipped projects.</p>
     </div>
 
     <!-- Filter bar -->
     <div class="filter-bar reveal" role="tablist" aria-label="Project filters">
       <span class="filter-label">Filter</span>
-      <button class="filter-btn active" data-filter="all">All <span class="count">12</span></button>
-      <button class="filter-btn" data-filter="web">Web <span class="count">5</span></button>
-      <button class="filter-btn" data-filter="game">Games <span class="count">3</span></button>
+      <button class="filter-btn active" data-filter="all">All <span class="count">8</span></button>
+      <button class="filter-btn" data-filter="web">Web <span class="count">1</span></button>
+      <button class="filter-btn" data-filter="game">Games <span class="count">2</span></button>
       <button class="filter-btn" data-filter="mobile">Mobile <span class="count">2</span></button>
-      <button class="filter-btn" data-filter="design">Design <span class="count">2</span></button>
+      <button class="filter-btn" data-filter="design">Design <span class="count">3</span></button>
     </div>
 
     <div class="work-grid" id="workGrid">
-
-      <article class="work-card reveal" data-cat="web">
-        <div class="work-thumb">
-          <span class="work-tag">Web</span>
-          <span class="thumb-emoji">📊</span>
-        </div>
+      <article class="work-card reveal" data-cat="mobile">
+        <div class="work-thumb"><span class="work-tag">Mobile</span><span class="thumb-emoji">🧾</span></div>
         <div class="work-body">
-          <div class="work-meta">2024 · Frontend</div>
-          <h3>Analytics Dashboard</h3>
-          <p>Real-time metrics with interactive charts, filtering, and export for BI teams.</p>
-          <div class="work-tags"><span>Vue</span><span>D3.js</span><span>Firebase</span></div>
-          <a href="#" class="work-link">View project →</a>
+          <div class="work-meta">2026 · Flutter app</div>
+          <h3>Paynote</h3>
+          <p>A full-stack store app with product management, invoicing, receipting, and secure payment-slip generation.</p>
+          <div class="work-tags"><span>Dart</span><span>Flutter</span><span>Android Studio</span></div>
+          <a href="https://wa.me/2348051464116?text=Tell%20me%20about%20Paynote" class="work-link" target="_blank" rel="noopener">Ask about Paynote →</a>
         </div>
       </article>
 
       <article class="work-card reveal" data-cat="web">
-        <div class="work-thumb">
-          <span class="work-tag">Web</span>
-          <span class="thumb-emoji">📝</span>
-        </div>
+        <div class="work-thumb"><span class="work-tag">Full-stack</span><span class="thumb-emoji">📖</span></div>
         <div class="work-body">
-          <div class="work-meta">2023 · Full-stack</div>
-          <h3>Task Manager</h3>
-          <p>Collaborative task tool with real-time updates, team workspaces, and insights.</p>
-          <div class="work-tags"><span>Next.js</span><span>Postgres</span><span>Tailwind</span></div>
-          <a href="#" class="work-link">View project →</a>
+          <div class="work-meta">2026 · Full-stack</div>
+          <h3>Readr</h3>
+          <p>A full-stack project featuring real-time metrics, interactive charts, filtering, and export for business intelligence teams.</p>
+          <div class="work-tags"><span>Supabase</span><span>Android Studio</span><span>GitHub</span></div>
+          <a href="https://wa.me/2348051464116?text=Tell%20me%20about%20Readr" class="work-link" target="_blank" rel="noopener">Ask about Readr →</a>
         </div>
       </article>
 
       <article class="work-card reveal" data-cat="game">
-        <div class="work-thumb">
-          <span class="work-tag">Game</span>
-          <span class="thumb-emoji">🎮</span>
-        </div>
+        <div class="work-thumb"><span class="work-tag">Game</span><span class="thumb-emoji">🎮</span></div>
         <div class="work-body">
-          <div class="work-meta">2024 · Unity</div>
-          <h3>Narrative RPG Prototype</h3>
-          <p>An interactive story where player choices shape the world around them.</p>
-          <div class="work-tags"><span>Unity</span><span>C#</span><span>Ink</span></div>
-          <a href="#" class="work-link">View project →</a>
+          <div class="work-meta">2025–present · 3D game</div>
+          <h3>Moriamo</h3>
+          <p>An original 3D Afro-Fantasy game exploring the resilience and unconditional love of a parent for their child.</p>
+          <div class="work-tags"><span>Blender</span><span>Unity</span><span>Canva</span><span>Inkscape</span></div>
+          <a href="https://wa.me/2348051464116?text=Tell%20me%20about%20Moriamo" class="work-link" target="_blank" rel="noopener">Ask about Moriamo →</a>
         </div>
       </article>
 
       <article class="work-card reveal" data-cat="design">
-        <div class="work-thumb">
-          <span class="work-tag">Design</span>
-          <span class="thumb-emoji">🎨</span>
-        </div>
+        <div class="work-thumb"><span class="work-tag">Design</span><span class="thumb-emoji">🎨</span></div>
         <div class="work-body">
-          <div class="work-meta">2023 · Design</div>
-          <h3>Design System</h3>
-          <p>A component library and token system used across six products and three teams.</p>
-          <div class="work-tags"><span>Storybook</span><span>Figma</span><span>React</span></div>
-          <a href="#" class="work-link">View project →</a>
-        </div>
-      </article>
-
-      <article class="work-card reveal" data-cat="web">
-        <div class="work-thumb">
-          <span class="work-tag">Web</span>
-          <span class="thumb-emoji">🗺️</span>
-        </div>
-        <div class="work-body">
-          <div class="work-meta">2022 · Web app</div>
-          <h3>Travel Tracker</h3>
-          <p>A visual journal for trips, with maps, geo-tagged photos, and offline support.</p>
-          <div class="work-tags"><span>React</span><span>Mapbox</span><span>PWA</span></div>
-          <a href="#" class="work-link">View project →</a>
+          <div class="work-meta">2023 · Brand identity</div>
+          <h3>Brand Identity</h3>
+          <p>A distinctive visual identity designed to make every sip feel memorable.</p>
+          <div class="work-tags"><span>Canva</span><span>Figma</span></div>
+          <a href="https://wa.me/2348051464116?text=Tell%20me%20about%20the%20Brand%20Identity%20project" class="work-link" target="_blank" rel="noopener">Ask about this project →</a>
         </div>
       </article>
 
       <article class="work-card reveal" data-cat="game">
-        <div class="work-thumb">
-          <span class="work-tag">Game</span>
-          <span class="thumb-emoji">🎵</span>
-        </div>
+        <div class="work-thumb"><span class="work-tag">Game</span><span class="thumb-emoji">🧩</span></div>
         <div class="work-body">
-          <div class="work-meta">2022 · Experiment</div>
-          <h3>Sound Field</h3>
-          <p>An audio-reactive canvas playground for visualizing music in real time.</p>
-          <div class="work-tags"><span>WebAudio</span><span>Canvas</span><span>TS</span></div>
-          <a href="#" class="work-link">View project →</a>
+          <div class="work-meta">2024 · Match-3 game</div>
+          <h3>Roots</h3>
+          <p>A Match-3 game with original mechanics and a story inspired by African roots and heritage.</p>
+          <div class="work-tags"><span>Unity</span><span>Canva</span></div>
+          <a href="https://wa.me/2348051464116?text=Tell%20me%20about%20Roots" class="work-link" target="_blank" rel="noopener">Ask about Roots →</a>
         </div>
       </article>
 
       <article class="work-card reveal" data-cat="mobile">
-        <div class="work-thumb">
-          <span class="work-tag">Mobile</span>
-          <span class="thumb-emoji">📱</span>
-        </div>
+        <div class="work-thumb"><span class="work-tag">Mobile</span><span class="thumb-emoji">🧮</span></div>
         <div class="work-body">
-          <div class="work-meta">2023 · Flutter</div>
-          <h3>Habit Tracker App</h3>
-          <p>A calm, offline-first habit app with streaks, reminders, and gentle nudges.</p>
-          <div class="work-tags"><span>Flutter</span><span>Dart</span><span>SQLite</span></div>
-          <a href="#" class="work-link">View project →</a>
-        </div>
-      </article>
-
-      <article class="work-card reveal" data-cat="mobile">
-        <div class="work-thumb">
-          <span class="work-tag">Mobile</span>
-          <span class="thumb-emoji">🍽️</span>
-        </div>
-        <div class="work-body">
-          <div class="work-meta">2022 · Flutter</div>
-          <h3>Recipe Keeper</h3>
-          <p>Save, organize, and scale recipes — with a shopping list that builds itself.</p>
-          <div class="work-tags"><span>Flutter</span><span>Firebase</span><span>REST</span></div>
-          <a href="#" class="work-link">View project →</a>
-        </div>
-      </article>
-
-      <article class="work-card reveal" data-cat="web">
-        <div class="work-thumb">
-          <span class="work-tag">Web</span>
-          <span class="thumb-emoji">💬</span>
-        </div>
-        <div class="work-body">
-          <div class="work-meta">2022 · Full-stack</div>
-          <h3>Chat Room</h3>
-          <p>A lightweight real-time chat with rooms, typing indicators, and message history.</p>
-          <div class="work-tags"><span>Socket.io</span><span>Express</span><span>MongoDB</span></div>
-          <a href="#" class="work-link">View project →</a>
-        </div>
-      </article>
-
-      <article class="work-card reveal" data-cat="game">
-        <div class="work-thumb">
-          <span class="work-tag">Game</span>
-          <span class="thumb-emoji">🧩</span>
-        </div>
-        <div class="work-body">
-          <div class="work-meta">2021 · Unity</div>
-          <h3>Puzzle Mechanics Test</h3>
-          <p>A sandbox for experimenting with grid-based puzzle mechanics and level design.</p>
-          <div class="work-tags"><span>Unity</span><span>C#</span><span>Level design</span></div>
-          <a href="#" class="work-link">View project →</a>
+          <div class="work-meta">2026 · Learning experiment</div>
+          <h3>Age Calculator</h3>
+          <p>A simple age-calculation tool with a clean, modern interface.</p>
+          <div class="work-tags"><span>Flutter</span><span>Dart</span><span>Android Studio</span></div>
+          <a href="https://wa.me/2348051464116?text=Tell%20me%20about%20the%20Age%20Calculator" class="work-link" target="_blank" rel="noopener">Ask about this project →</a>
         </div>
       </article>
 
       <article class="work-card reveal" data-cat="design">
-        <div class="work-thumb">
-          <span class="work-tag">Design</span>
-          <span class="thumb-emoji">📰</span>
-        </div>
+        <div class="work-thumb"><span class="work-tag">3D</span><span class="thumb-emoji">🧊</span></div>
         <div class="work-body">
-          <div class="work-meta">2021 · Branding</div>
-          <h3>Café Brand Identity</h3>
-          <p>A full visual identity for a local café — logo, packaging, menus, and socials.</p>
-          <div class="work-tags"><span>Branding</span><span>Figma</span><span>Print</span></div>
-          <a href="#" class="work-link">View project →</a>
+          <div class="work-meta">2024–present · 3D models</div>
+          <h3>Character &amp; Object Models</h3>
+          <p>3D representations of real-life and conceptual characters and objects for use across projects.</p>
+          <div class="work-tags"><span>Blender</span></div>
+          <a href="https://wa.me/2348051464116?text=Tell%20me%20about%20the%203D%20models" class="work-link" target="_blank" rel="noopener">Ask about this project →</a>
         </div>
       </article>
 
-      <article class="work-card reveal" data-cat="web">
-        <div class="work-thumb">
-          <span class="work-tag">Web</span>
-          <span class="thumb-emoji">⚡</span>
-        </div>
+      <article class="work-card reveal" data-cat="design">
+        <div class="work-thumb"><span class="work-tag">3D &amp; motion</span><span class="thumb-emoji">🎥</span></div>
         <div class="work-body">
-          <div class="work-meta">2020 · Side project</div>
-          <h3>Dev Snippet Library</h3>
-          <p>A personal library for storing and searching code snippets, with syntax highlighting.</p>
-          <div class="work-tags"><span>React</span><span>Prism</span><span>LocalStorage</span></div>
-          <a href="#" class="work-link">View project →</a>
+          <div class="work-meta">2024–present · Visualizers</div>
+          <h3>Music &amp; Poetry Visualizers</h3>
+          <p>Immersive 3D visualizations created for vocal renditions, music, and poetry.</p>
+          <div class="work-tags"><span>Blender</span><span>Canva</span><span>CapCut</span></div>
+          <a href="https://wa.me/2348051464116?text=Tell%20me%20about%20the%20visualizers" class="work-link" target="_blank" rel="noopener">Ask about this project →</a>
         </div>
       </article>
 
     </div>
 
     <div style="text-align:center; margin-top: 50px;">
-      <a href="#" class="btn btn-primary">
+      <a href="https://github.com/Max140804" class="btn btn-primary" target="_blank" rel="noopener">
         See more on GitHub
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       </a>
@@ -1370,8 +1285,8 @@
         <div class="stat-lbl">Years Experience</div>
       </div>
       <div class="stat-block reveal">
-        <div class="stat-num">∞</div>
-        <div class="stat-lbl">Sides In Progress</div>
+        <div class="stat-num">8</div>
+        <div class="stat-lbl">Projects Featured Here</div>
       </div>
     </div>
   </div>
@@ -1435,19 +1350,21 @@
   <div class="container">
     <div class="footer-logo"><img class="brand-logo" src="LOGO.png" alt="" /> Mahd Maxx Creative Studios</div>
     <div class="footer-socials">
-      <a href="mailto:your@email.com" aria-label="Email">
+      <a href="mailto:mahdmaxxcreativitystudios@gmail.com" aria-label="Email">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
       </a>
       <a href="https://wa.me/2348051464116" target="_blank" rel="noopener" aria-label="WhatsApp">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20l1.2-4.7a8.5 8.5 0 1 1 16.3-3.8Z"/><path d="M8.5 8.5c.3 2.2 2.8 4.7 5 5l1.2-1.2 2 1c-.2 1.4-1.3 2.4-2.7 2.2-3.6-.5-6.6-3.5-7.1-7.1-.2-1.4.8-2.5 2.2-2.7l1 2-1.6 1.8Z"/></svg>
-      </a>
-      <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener" aria-label="LinkedIn">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
+  </svg>
+</a>
+      <a href="https://linkedin.com/in/mahdmaxx" target="_blank" rel="noopener" aria-label="LinkedIn">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
       </a>
-      <a href="https://github.com/yourusername" target="_blank" rel="noopener" aria-label="GitHub">
+      <a href="https://github.com/Max140804" target="_blank" rel="noopener" aria-label="GitHub">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
       </a>
-      <a href="https://twitter.com/yourusername" target="_blank" rel="noopener" aria-label="Twitter">
+      <a href="https://x.com/mahd_maxx" target="_blank" rel="noopener" aria-label="Twitter">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
       </a>
     </div>
