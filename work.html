@@ -460,6 +460,15 @@
     text-transform: uppercase;
   }
   .featured-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+  .arcade-play-note {
+    padding: 14px 16px;
+    border: 2px solid var(--ink);
+    border-radius: 3px;
+    background: var(--yellow);
+    box-shadow: 4px 4px 0 var(--ink);
+    font-weight: 700;
+    line-height: 1.45;
+  }
 
   /* ============ PROJECT GRID ============ */
   .work-main {
@@ -1080,7 +1089,7 @@
 <nav class="navbar">
   <div class="container">
     <div class="nav-logo">
-      <a href="game.html" class="logo-game" aria-label="Open Starfall"><img class="brand-logo" src="LOGO.png" alt="" /></a>
+      <a href="game.html" class="logo-game" aria-label="Play Starfall Arcade"><img class="brand-logo" src="LOGO.png" alt="" /></a>
       <a href="index.html" class="brand-home">Mahd Maxx Creative Studios</a>
     </div>
     <div class="nav-links" id="navLinks">
@@ -1127,36 +1136,30 @@
   <div class="container">
     <div class="section-head reveal">
       <span class="eyebrow yellow">Featured</span>
-      <h2 class="display h2">Featured project:<br />Paynote.</h2>
-      <p>A mobile application bringing store management and payment records together.</p>
+      <h2 class="display h2">Featured project:<br />Starfall Arcade.</h2>
+      <p>A browser-playable arcade featuring Starfall and Rocket Duel, built with HTML Canvas and JavaScript.</p>
     </div>
 
     <article class="featured-card reveal">
       <div class="featured-visual">
         <span class="featured-badge">★ Featured Project</span>
-        <span class="big-emoji">🧾</span>
+        <span class="big-emoji">🕹️</span>
       </div>
       <div class="featured-body">
         <div class="featured-meta">
           <span class="pill year">2026</span>
-          <span class="pill type">Mobile application</span>
+          <span class="pill type">Browser arcade</span>
         </div>
-        <h3>Paynote</h3>
+        <h3>Starfall Arcade</h3>
         <p>
-          A full-stack store with product management, invoicing, receipting,
-          and secure payment-slip generation.
+          Two quick-play survival games in one browser arcade: dodge the shards in Starfall or take on Rocket Duel.
         </p>
         <div class="featured-tags">
-          <span>Dart</span>
-          <span>Flutter</span>
-          <span>Android Studio</span>
+          <span>HTML Canvas</span>
+          <span>JavaScript</span>
+          <span>Browser game</span>
         </div>
-        <div class="featured-actions">
-          <a href="https://wa.me/2348051464116?text=I'd%20like%20to%20know%20more%20about%20Paynote" class="btn btn-primary" target="_blank" rel="noopener">
-            Ask about Paynote
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </a>
-        </div>
+        <div class="arcade-play-note" role="note">Do you want to see a neat easter egg? Click the website logo.</div>
       </div>
     </article>
   </div>
@@ -1174,9 +1177,9 @@
     <!-- Filter bar -->
     <div class="filter-bar reveal" role="tablist" aria-label="Project filters">
       <span class="filter-label">Filter</span>
-      <button class="filter-btn active" data-filter="all">All <span class="count">8</span></button>
+      <button class="filter-btn active" data-filter="all">All <span class="count">9</span></button>
       <button class="filter-btn" data-filter="web">Web <span class="count">1</span></button>
-      <button class="filter-btn" data-filter="game">Games <span class="count">2</span></button>
+      <button class="filter-btn" data-filter="game">Games <span class="count">3</span></button>
       <button class="filter-btn" data-filter="mobile">Mobile <span class="count">2</span></button>
       <button class="filter-btn" data-filter="design">Design <span class="count">3</span></button>
     </div>
@@ -1205,13 +1208,24 @@
       </article>
 
       <article class="work-card reveal" data-cat="game">
+        <div class="work-thumb"><span class="work-tag">Browser arcade</span><span class="thumb-emoji">🕹️</span></div>
+        <div class="work-body">
+          <div class="work-meta">2026 · Browser game</div>
+          <h3>Starfall Arcade</h3>
+          <p>Two quick-play survival games in one browser arcade: dodge the shards in Starfall or take on Rocket Duel.</p>
+          <div class="work-tags"><span>Unity</span><span>HTML Canvas</span><span>JavaScript</span><span>Web</span></div>
+          <a href="game.html" class="work-link">Play in browser →</a>
+        </div>
+      </article>
+
+      <article class="work-card reveal" data-cat="game">
         <div class="work-thumb"><span class="work-tag">Game</span><span class="thumb-emoji">🎮</span></div>
         <div class="work-body">
-          <div class="work-meta">2025–present · 3D game</div>
-          <h3>Starfall</h3>
+          <div class="work-meta">2026–present · 3D game</div>
+          <h3>Moriamo</h3>
           <p>An original 3D Afro-Fantasy game exploring the resilience and unconditional love of a parent for their child.</p>
           <div class="work-tags"><span>Blender</span><span>Unity</span><span>Canva</span><span>Inkscape</span></div>
-          <a href="https://wa.me/2348051464116?text=Tell%20me%20about%20Starfall" class="work-link" target="_blank" rel="noopener">Ask about Starfall →</a>
+          <a href="https://wa.me/2348051464116?text=Tell%20me%20about%20Moriamo" class="work-link" target="_blank" rel="noopener">Ask about Moriamo →</a>
         </div>
       </article>
 
