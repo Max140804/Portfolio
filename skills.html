@@ -196,13 +196,6 @@
     line-height: 1;
     transition: transform 0.5s cubic-bezier(0.34, 1.6, 0.64, 1);
   }
-  .float-cta-icon svg { display: none; }
-  .float-cta-icon::before {
-    content: '';
-    width: 22px;
-    height: 22px;
-    background: url('../assets/whatsapp.svg') center / contain no-repeat;
-  }
   .float-cta-label {
     display: block;
     max-width: 0;
@@ -1000,8 +993,8 @@
     .footer { padding: 30px 0 110px; }
     .footer .container { flex-direction: column; text-align: center; gap: 18px; }
 
-    .float-cta { right: 14px; bottom: 14px; height: 54px; }
-    .float-cta-icon { flex: 0 0 48px; font-size: 1.05rem; }
+    .float-cta { right: 18px; bottom: 18px; height: 58px; }
+    .float-cta-icon { flex: 0 0 52px; font-size: 1.15rem; }
   }
 
   /* ---------- VERY SMALL PHONES (≤ 380px) ---------- */
@@ -1030,6 +1023,66 @@
     .tools-track { animation: none; }
     .reveal { opacity: 1; transform: none; transition: none; }
     .skill-fill { transition: none; }
+  }
+  .float-cta {
+    right: 26px;
+    bottom: 26px;
+    z-index: 9999;
+    width: 64px;
+    height: 64px;
+    aspect-ratio: 1;
+    padding: 0;
+    border-radius: 14px;
+    justify-content: center;
+    transform: none;
+  }
+  .float-cta:hover,
+  .float-cta:focus-visible { transform: none; }
+  .float-cta:focus-visible { outline: 3px solid var(--ink); outline-offset: 4px; }
+  .float-cta-icon { flex: 0 0 100%; width: 100%; height: 100%; transition: none; }
+  .float-cta-icon svg { display: none; }
+  .float-cta-icon::before {
+    content: '';
+    display: block;
+    width: 26px;
+    height: 26px;
+    background: url('../Portfolio/whatsapp.svg') center / contain no-repeat;
+  }
+  .float-cta-label { display: none; }
+  .float-cta:hover .float-cta-icon,
+  .float-cta:focus-visible .float-cta-icon { transform: none; }
+  @media (max-width: 768px) {
+    .float-cta {
+      right: max(18px, env(safe-area-inset-right));
+      bottom: max(18px, env(safe-area-inset-bottom));
+      width: 58px;
+      height: 58px;
+    }
+  }
+  .float-cta { width: auto; min-width: 64px; aspect-ratio: auto; }
+  .float-cta-icon {
+    flex: 0 0 58px;
+    width: 58px;
+    height: 58px;
+    transition: transform 0.5s cubic-bezier(0.34, 1.6, 0.64, 1);
+  }
+  .float-cta-label { display: block; }
+  .float-cta:hover .float-cta-label,
+  .float-cta:focus-visible .float-cta-label {
+    max-width: 140px;
+    padding-right: 22px;
+    opacity: 1;
+  }
+  .float-cta:hover .float-cta-icon,
+  .float-cta:focus-visible .float-cta-icon { transform: scale(1.12); }
+  @media (max-width: 768px) {
+    .float-cta { min-width: 58px; height: 58px; }
+    .float-cta-icon { flex: 0 0 52px; width: 52px; height: 52px; }
+  }
+  @media (hover: none) {
+    .float-cta:hover { background: var(--yellow); box-shadow: 5px 5px 0 var(--ink); }
+    .float-cta:hover .float-cta-label { max-width: 0; padding-right: 0; opacity: 0; }
+    .float-cta:hover .float-cta-icon { transform: none; }
   }
 </style>
 </head>
@@ -1593,6 +1646,12 @@
       </a>
       <a href="https://x.com/mahd_maxx" target="_blank" rel="noopener" aria-label="Twitter">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
+      </a>
+      <a href="https://www.youtube.com/@MahdMaxxCreativeStudios" target="_blank" rel="noopener" aria-label="YouTube">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23.5 6.5a3.1 3.1 0 0 0-2.18-2.18C19.53 3.75 12 3.75 12 3.75s-7.53 0-9.32.57A3.1 3.1 0 0 0 .5 6.5 32.27 32.27 0 0 0 0 12a32.27 32.27 0 0 0 .5 5.5 3.1 3.1 0 0 0 2.18 2.18c1.79.57 9.32.57 9.32.57s7.53 0 9.32-.57A3.1 3.1 0 0 0 23.5 17.5 32.27 32.27 0 0 0 24 12a32.27 32.27 0 0 0-.5-5.5ZM9.75 15.5v-7l6.25 3.5-6.25 3.5Z"/></svg>
+      </a>
+      <a href="https://instagram.com/mahd_maxx_studios" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg>
       </a>
     </div>
     <div class="footer-copy">© 2026 Mahd Maxx Creative Studios. All rights reserved.</div>
